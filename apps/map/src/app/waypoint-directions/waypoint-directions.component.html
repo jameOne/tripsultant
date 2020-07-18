@@ -1,0 +1,89 @@
+<div id="waypoint-directions-container">
+  <mat-radio-group (change)="radioButtonChanged($event)"
+                   id="waypoint-directions-radio-group">
+    <div *ngFor="let route of currentDirectionsRoutes;
+                 let i = index; trackBy: trackBy">
+      <mat-card id="waypoint-directions-card-panel">
+        <mat-card-header id="waypoint-directions-card-panel-header">
+          <div id="waypoint-directions-card-panel-title-container">
+            <mat-card-title id="waypoint-directions-card-panel-title">
+              Route: <span id="directions-option">{{i + 1}}</span>
+            </mat-card-title>
+            <mat-card-subtitle
+              id="waypoint-directions-card-panel-description">
+              {{currentDirectionsSummaries[i]}}
+            </mat-card-subtitle>
+          </div>
+          <div class="waypoint-directions-selected-route-radio-container">
+            <mat-radio-button class="waypoint-directions-route-radio"
+                              [checked]="selectedRouteIndex === i"
+                              [value]="route"></mat-radio-button>
+          </div>
+        </mat-card-header>
+        <mat-card-content>
+          <div *ngIf="directionsMode === 1">
+            <tripsultant-apps-map-transit-directions-information
+              [routeIndex]="i"></tripsultant-apps-map-transit-directions-information>
+          </div>
+          <div id="waypoint-directions-tree-container">
+            <mat-tree id="waypoint-directions-tree"
+                      [dataSource]="dataSources[i]"
+                      [treeControl]="treeControl">
+              <!-- This is the tree node template for leaf nodes -->
+              <mat-tree-node id="waypoint-directions-tree-child-node"
+                             [@fadeInAndOut]
+                             *matTreeNodeDef="let node">
+                <!-- use a disabled button to provide padding for tree leaf -->
+                <div id="waypoint-directions-img">
+                  <img alt="Arrow" [src]="determineDirectionsImage(node.text)">
+                </div>
+                <div id="waypoint-directions-child-text-container"
+                     [innerHTML]="node.text | noSanitize"></div>
+              </mat-tree-node>
+              <!-- This is the tree node template for expandable nodes -->
+              <mat-tree-node id="waypoint-directions-tree-parent-node"
+                             *matTreeNodeDef="let node; when: hasChild"
+                             matTreeNodePadding>
+                <div id="waypoint-directions-parent-button-container">
+                  <button mat-icon-button matTreeNodeToggle
+                          [attr.aria-label]="'toggle ' + node.text">
+                    <mat-icon>
+                      {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                    </mat-icon>
+                  </button>
+                  <div id="waypoint-directions-transit-mode-icon-container">
+                    <mat-icon *ngIf="directionsMode === 0">directions_car</mat-icon>
+                    <mat-icon *ngIf="directionsMode === 1">directions_transit</mat-icon>
+                    <mat-icon *ngIf="directionsMode === 2">directions_walk</mat-icon>
+                    <mat-icon *ngIf="directionsMode === 3">local_airport</mat-icon>
+                  </div>
+                  <div id="waypoint-directions-parent-button-text">
+                    <div id="waypoint-directions-leg-container">
+                <span>{{node.index + 1}}<span>{{superScript(node.index + 1)}}</span>
+                  Leg</span>
+                    </div>
+                    <div id="waypoint-directions-leg-duration">
+                      {{node.duration}}
+                    </div>
+                    <div id="waypoint-directions-leg-distance">
+                      {{node.distance}}
+                    </div>
+                  </div>
+                </div>
+              </mat-tree-node>
+            </mat-tree>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-radio-group>
+  <mat-card id="waypoint-directions-card">
+    <mat-card-content id="waypoint-directions-card-content">
+      These directions are intended to be used for planning.
+      It is possible traffic, construction projects, weather, or
+      other events may cause conditions to differ substantially
+      from what is displayed here. Please plan your trip accordingly.
+      Remember to obey all signs and/or notices regarding your route.
+    </mat-card-content>
+  </mat-card>
+</div>

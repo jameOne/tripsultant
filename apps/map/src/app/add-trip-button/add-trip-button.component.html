@@ -1,0 +1,26 @@
+<div id="add-trip-button-container">
+  <button id="add-trip-mat-stroked-button"
+          *ngIf="displayType === 'mat-stroked-button'"
+          mat-stroked-button
+          color="primary"
+          matTooltip="Click here to add a map."
+          (click)="openAddTripDialog()">
+    Add Trip
+  </button>
+  <button id="add-trip-mat-raised-button"
+          *ngIf="displayType === 'mat-raised-button'"
+          mat-raised-button
+          color="primary"
+          matTooltip="Click here to add a map."
+          (click)="openAddTripDialog()">
+    Add Trip
+  </button>
+  <button id="add-trip-mat-mini-fab-button"
+          *ngIf="displayType === 'mat-mini-fab-button'"
+          mat-mini-fab
+          color="primary"
+          matTooltip="Click here to add a map."
+          (click)="openAddTripDialog()">
+    <mat-icon id="add-trip-mat-mini-fab-button-icon">add</mat-icon>
+  </button>
+</div>

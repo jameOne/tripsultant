@@ -1,0 +1,16 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'tripsultant-apps-map-trip-detail',
+  templateUrl: './trip-detail.component.html',
+  styleUrls: ['./trip-detail.component.scss']
+})
+export class TripDetailComponent implements OnInit {
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
+
+}

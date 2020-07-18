@@ -1,0 +1,41 @@
+@import "../../trip.theme";
+
+#contact-information-content-container {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+  justify-content: space-between;
+}
+
+#contact-information-content-divider {
+  height: 200px;
+}
+
+#contact-information-content-blurb-container {
+  max-width: 85%;
+}
+
+#contact-information-content-mailto {
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  text-decoration: none;
+}
+
+#contact-information-content-mailto-link {
+  color: #004ba0;
+  margin-left: 5px;
+  padding-top: 3px;
+}
+
+#contact-information-content-mailto-link {
+  color: $primary;
+  margin-left: 5px;
+  padding-top: 3px;
+}
+
+#contact-information-contact-last-name {
+  color: $accent;
+}

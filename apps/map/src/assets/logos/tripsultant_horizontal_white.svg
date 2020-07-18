@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  width="300.69659mm"
+  height="62.83252mm"
+  viewBox="0 0 300.69659 62.83252"
+  version="1.1"
+  id="svg8"
+  inkscape:version="1.0 (6e3e5246a0, 2020-05-07)"
+  inkscape:export-filename="/home/james/Desktop/trip_horizontal.png"
+  inkscape:export-xdpi="20.321329"
+  inkscape:export-ydpi="20.321329"
+  sodipodi:docname="trip_logo_white.svg">
+  <defs
+    id="defs2">
+    <rect
+      id="rect1068"
+      height="16.913059"
+      width="84.92495"
+      y="5.5833616"
+      x="33.436234"/>
+    <rect
+      id="rect1056"
+      height="12.627839"
+      width="39.82888"
+      y="13.765575"
+      x="27.526258"/>
+    <rect
+      id="rect1050"
+      height="68.5616"
+      width="145.28194"
+      y="13.821519"
+      x="3.61656"/>
+    <rect
+      id="rect1038"
+      height="70.237007"
+      width="98.635567"
+      y="5.4185104"
+      x="23.357723"/>
+    <rect
+      id="rect996"
+      height="189.03728"
+      width="248.65121"
+      y="47.379681"
+      x="-20.307732"/>
+    <rect
+      x="52.788605"
+      y="247.99954"
+      width="14.288187"
+      height="12.627505"
+      id="rect941"/>
+    <rect
+      x="30.331921"
+      y="245.66827"
+      width="258.30057"
+      height="67.19809"
+      id="rect935"/>
+    <rect
+      id="rect965"
+      height="17.185596"
+      width="182.26762"
+      y="250.06152"
+      x="165.55054"/>
+    <rect
+      id="rect951"
+      height="37.841564"
+      width="178.04498"
+      y="228.77905"
+      x="22.595728"/>
+    <linearGradient
+      id="linearGradient3157"
+      osb:paint="solid">
+      <stop
+        style="stop-color:#2cb765;stop-opacity:1;"
+        offset="0"
+        id="stop3155"/>
+    </linearGradient>
+    <linearGradient
+      id="linearGradient3089"
+      osb:paint="solid">
+      <stop
+        style="stop-color:#000000;stop-opacity:1;"
+        offset="0"
+        id="stop3087"/>
+    </linearGradient>
+    <linearGradient
+      id="linearGradient3049"
+      osb:paint="solid">
+      <stop
+        style="stop-color:#a0a0a0;stop-opacity:1;"
+        offset="0"
+        id="stop3047"/>
+    </linearGradient>
+    <linearGradient
+      id="linearGradient3043"
+      osb:paint="solid">
+      <stop
+        style="stop-color:#4eb6d8;stop-opacity:1;"
+        offset="0"
+        id="stop3041"/>
+    </linearGradient>
+    <rect
+      x="30.331921"
+      y="245.66827"
+      width="258.30057"
+      height="67.19809"
+      id="rect935-6"/>
+    <rect
+      x="30.331921"
+      y="245.66827"
+      width="258.30057"
+      height="67.19809"
+      id="rect2529"/>
+  </defs>
+  <sodipodi:namedview
+    fit-margin-bottom="0"
+    fit-margin-right="0"
+    fit-margin-left="0"
+    fit-margin-top="0"
+    units="mm"
+    id="base"
+    pagecolor="#8e8e8e"
+    bordercolor="#666666"
+    borderopacity="1.0"
+    inkscape:pageopacity="0"
+    inkscape:pageshadow="2"
+    inkscape:zoom="0.7"
+    inkscape:cx="585.72462"
+    inkscape:cy="187.26448"
+    inkscape:document-units="mm"
+    inkscape:current-layer="svg8"
+    inkscape:document-rotation="0"
+    showgrid="false"
+    inkscape:snap-global="true"
+    inkscape:window-width="1853"
+    inkscape:window-height="1025"
+    inkscape:window-x="67"
+    inkscape:window-y="27"
+    inkscape:window-maximized="1"
+    inkscape:pagecheckerboard="true"/>
+  <metadata
+    id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+        rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+          rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+    transform="translate(589.93461,-359.7891)"
+    inkscape:label="Layer 1"
+    inkscape:groupmode="layer"
+    id="layer1"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 661.44184,-289.98189 -19.81344,15.32028"
+    id="path220"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 664.16784,-290.42376 17.35809,15.28472"
+    id="path222"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 661.44184,-289.98189 -0.55823,-44.34912"
+    id="path224"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 664.16784,-290.42376 0.16249,-44.97278"
+    id="path226"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 660.88361,-334.33101 -20.00386,11.78734"
+    id="path230"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 664.33032,-335.39654 18.63396,11.38985"
+    id="path232"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 640.87975,-322.54367 0.74865,47.88205"
+    id="path234"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 682.96428,-324.00669 -1.43835,48.86765"
+    id="path238"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 684.73765,-324.36015 -0.15297,48.68103"
+    id="path242"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 705.13527,-337.49413 -20.39762,13.13398"
+    id="path248"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.173814;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.91195;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 704.45422,-287.87273 -19.85966,12.18148"
+    id="path250"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 708.29579,-337.29268 21.50385,12.32338"
+    id="path258"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 707.30066,-288.39999 21.75489,13.19157"
+    id="path260"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 729.79964,-324.9693 -0.73477,49.77143"
+    id="path262"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 705.13527,-337.49413 -0.68105,49.6214"
+    id="path266"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="m 708.29579,-337.29268 -0.99513,48.89269"
+    id="path270"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"/>
+  <text
+    xml:space="preserve"
+    style="font-size:31.75px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+    x="533.45258"
+    y="-169.06219"
+    id="text3195"><tspan
+       sodipodi:role="line"
+       id="tspan3193"
+       x="533.45258"
+       y="-169.06219"
+       style="stroke-width:0.264583" /></text>
+  <path
+    id="path941"
+    d="m 641.84366,-293.28553 c -0.13789,-9.70373 -0.30979,-20.20536 -0.38196,-23.3371 l -0.1312,-5.69409 9.50244,-5.59832 9.50245,-5.5983 0.12692,7.52098 c 0.0698,4.13654 0.19308,13.91017 0.27397,21.71922 l 0.1471,14.19817 -8.61912,6.65543 c -4.74051,3.66049 -8.96799,6.90783 -9.39444,7.21615 l -0.77535,0.56078 z"
+    style="fill:#ffffff;fill-opacity:1;stroke-width:0.244957;stroke-miterlimit:4;stroke-dasharray:0, 2.69453;stroke-dashoffset:0"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"/>
+  <path
+    id="path943"
+    d="m 685.1035,-289.12763 c 0.0157,-6.94724 0.0862,-17.69293 0.15524,-23.8795 l 0.12569,-11.24824 9.5746,-6.17213 9.57484,-6.17213 -0.006,4.47929 c -0.004,2.46359 -0.13721,13.39538 -0.29746,24.29277 -0.23917,16.25244 -0.34165,19.84093 -0.57047,19.96625 -0.21621,0.11826 -7.78569,4.74682 -18.22366,11.14294 -0.34474,0.21114 -0.36096,-0.39234 -0.33296,-12.40925 z"
+    style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"/>
+  <path
+    id="path945"
+    d="m 672.86,-283.35389 -8.17725,-7.20466 0.0758,-21.9429 c 0.0416,-12.06861 0.10308,-21.96439 0.13583,-21.99064 0.033,-0.026 3.97478,2.3364 8.75941,5.25035 l 8.69935,5.29814 0.0143,1.70082 c 0.0128,1.49614 -1.1394,42.07148 -1.27761,44.97251 l -0.0532,1.1209 z"
+    style="fill:#ffffff;fill-opacity:1;stroke-width:0.244957;stroke-miterlimit:4;stroke-dasharray:0, 2.69453;stroke-dashoffset:0"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"/>
+  <path
+    id="path947"
+    d="m 718.12175,-282.32284 -10.27568,-6.23338 -5.7e-4,-1.64682 c -5.3e-4,-1.3622 0.71481,-37.23852 0.88269,-44.26031 l 0.0503,-2.08955 10.28351,5.89427 10.28348,5.89428 -0.0998,4.9952 c -0.056,2.74736 -0.22721,13.66955 -0.38153,24.27147 -0.15418,10.60194 -0.32179,19.30592 -0.37252,19.34211 -0.0513,0.0364 -4.71626,-2.73907 -10.3678,-6.16727 z"
+    style="fill:#ffffff;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"/>
+  <text
+    transform="translate(585.70056,-365.06111)"
+    style="font-style:normal;font-weight:normal;font-size:31.75px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect951);fill:#000000;fill-opacity:1;stroke:none;"
+    id="text949"
+    xml:space="preserve"/>
+  <text
+    transform="translate(589.93461,-359.7891)"
+    style="font-size:10.5833px;line-height:1.25;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';white-space:pre;shape-inside:url(#rect965);"
+    id="text963"
+    xml:space="preserve"/>
+  <text
+    xml:space="preserve"
+    id="text933"
+    style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:42.3333px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:'Roboto Light';white-space:pre;shape-inside:url(#rect935);"
+    transform="translate(713.44776,-571.59128)"
+    inkscape:export-filename="/home/james/PycharmProjects/weevre-ui/src/assets/logos/trip.png"
+    inkscape:export-xdpi="31.016605"
+    inkscape:export-ydpi="31.016605"><tspan
+       x="30.332031"
+       y="282.70961"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.3333px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;fill-opacity:1">Trip</tspan><tspan
+    style="shape-inside:url(#rect935);fill:#ffffff;fill-opacity:1">sultant</tspan></tspan></text>
+  <text
+    transform="translate(589.93461,-359.7891)"
+    xml:space="preserve"
+    id="text939"
+    style="font-size:10.5833px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;white-space:pre;shape-inside:url(#rect941);"/>
+  <text
+    transform="translate(589.93461,-359.7891)"
+    style="font-size:10.5833px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;white-space:pre;shape-inside:url(#rect996);"
+    id="text994"
+    xml:space="preserve"/>
+  <text
+    transform="translate(589.93461,-359.7891)"
+    style="font-size:10.5833px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;white-space:pre;shape-inside:url(#rect1038);"
+    id="text1036"
+    xml:space="preserve"/>
+  <text
+    transform="translate(589.93461,-359.7891)"
+    style="font-size:10.5833px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;white-space:pre;shape-inside:url(#rect1050);"
+    id="text1048"
+    xml:space="preserve"/>
+  <text
+    transform="translate(589.93461,-359.7891)"
+    style="font-size:10.5833px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;white-space:pre;shape-inside:url(#rect1056);"
+    id="text1054"
+    xml:space="preserve"/>
+  <text
+    transform="translate(589.93461,-359.7891)"
+    style="font-size:10.5833px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;white-space:pre;shape-inside:url(#rect1068);"
+    id="text1066"
+    xml:space="preserve"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 20.56208,47.51224 0.74865,62.83252"
+    id="path220-7"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 23.28809,47.07037 40.64618,62.35509"
+    id="path222-5"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 20.56208,47.51224 20.00386,3.16312"
+    id="path224-3"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 23.28809,47.07037 23.45058,2.09759"
+    id="path226-5"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 20.00386,3.16312 0,14.95045"
+    id="path230-6"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 23.45056,2.09759 42.08453,13.48743"
+    id="path232-2"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 0,14.95045 0.74865,62.8325"
+    id="path234-9"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 42.08453,13.48743 40.64618,62.35509"
+    id="path238-1"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 43.8579,13.13398 43.70493,61.81501"
+    id="path242-2"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 64.25552,0 43.8579,13.13398"
+    id="path248-7"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.173814;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.91195;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 63.57447,49.6214 43.71481,61.80287"
+    id="path250-0"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 67.41604,0.20145 88.91989,12.52482"
+    id="path258-9"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 66.42091,49.09414 88.1758,62.28571"
+    id="path260-3"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 88.91989,12.52482 88.18513,62.29626"
+    id="path262-6"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.179445;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.9739;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 64.25552,0 63.57447,49.6214"
+    id="path266-0"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.171474;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:0, 1.88621;stroke-dashoffset:0;stroke-opacity:1"
+    d="M 67.41604,0.20145 66.42091,49.09414"
+    id="path270-6"
+    inkscape:connector-type="polyline"
+    inkscape:connector-curvature="0"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"/>
+  <path
+    id="path941-2"
+    d="M 0.9639,44.2086 C 0.82601,34.50487 0.65412,24.00324 0.58195,20.87149 l -0.1312,-5.69408 9.50244,-5.59832 9.50245,-5.59831 0.12691,7.52098 c 0.0698,4.13654 0.19309,13.91018 0.27398,21.71922 l 0.1471,14.19818 -8.61912,6.65543 c -4.74051,3.66048 -8.968,6.90783 -9.39444,7.21614 l -0.77536,0.56079 z"
+    style="fill:#ffffff;fill-opacity:1;stroke-width:0.244957;stroke-miterlimit:4;stroke-dasharray:0, 2.69454;stroke-dashoffset:0"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"/>
+  <path
+    id="path943-6"
+    d="m 44.22375,48.3665 c 0.0157,-6.94725 0.0862,-17.69294 0.15524,-23.87951 l 0.12569,-11.24824 9.5746,-6.17213 9.57484,-6.17213 -0.006,4.4793 C 63.64412,7.83737 63.51091,18.76916 63.35066,29.66656 63.11149,45.919 63.00901,49.50749 62.78019,49.63281 62.56398,49.75107 54.9945,54.37962 44.55653,60.77574 44.21179,60.98688 44.19557,60.3834 44.22357,48.3665 Z"
+    style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"/>
+  <path
+    id="path945-1"
+    d="M 31.98025,54.14023 23.803,46.93558 23.8788,24.99267 c 0.0416,-12.0686 0.10308,-21.96439 0.13582,-21.99064 0.033,-0.026 3.97479,2.3364 8.75942,5.25035 l 8.69935,5.29814 0.0143,1.70082 c 0.0128,1.49614 -1.1394,42.07148 -1.27761,44.97252 l -0.0532,1.12089 z"
+    style="fill:#ffffff;fill-opacity:1;stroke-width:0.244957;stroke-miterlimit:4;stroke-dasharray:0, 2.69454;stroke-dashoffset:0"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"/>
+  <path
+    id="path947-8"
+    d="M 77.242,55.17129 66.96632,48.93791 66.96579,47.29108 C 66.96526,45.92889 67.6806,10.05256 67.84848,3.03077 l 0.0503,-2.08954 10.28351,5.89426 10.28349,5.89428 -0.0998,4.9952 c -0.056,2.74737 -0.22722,13.66956 -0.38154,24.27147 -0.15417,10.60195 -0.32179,19.30592 -0.37252,19.34212 -0.0513,0.0364 -4.71626,-2.73907 -10.3678,-6.16727 z"
+    style="fill:#ffffff;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"/>
+  <text
+    xml:space="preserve"
+    id="text933-7"
+    style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:42.3333px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:'Roboto Light';white-space:pre;shape-inside:url(#rect935-6);"
+    transform="translate(72.56801,-234.09714)"
+    inkscape:export-filename="/home/james/WebstormProjects/tripsultant-ui/src/assets/logos/trip_horizontal_small_white.png"
+    inkscape:export-xdpi="8.447051"
+    inkscape:export-ydpi="8.447051"><tspan
+       x="30.332031"
+       y="282.70961"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.3333px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff;fill-opacity:1">Trip</tspan><tspan
+    style="shape-inside:url(#rect935-6);fill:#ffffff;fill-opacity:1">sultant</tspan></tspan></text>
+</svg>

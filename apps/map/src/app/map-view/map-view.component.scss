@@ -1,0 +1,43 @@
+@import "../../trip.theme";
+
+#map {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 48px - 2px);
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+#map-controls-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+#center-view-port-button,
+#zoom-in-button,
+#zoom-out-button,
+#near-me-button,
+#sidenav-toggle-button {
+  margin-bottom: 5px;
+  z-index: 1001;
+}
+
+#center-view-port-button, {
+  margin-top: 25px;
+}
+
+#zoom-in-button,
+#zoom-out-button,
+#near-me-button,
+#center-view-port-button {
+  color: $primary;
+  background: white;
+}
+
+#sidenav-toggle-button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+  width: 22px;
+}

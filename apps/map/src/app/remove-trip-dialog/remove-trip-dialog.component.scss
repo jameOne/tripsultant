@@ -1,0 +1,31 @@
+@import "../../trip.theme";
+
+#remove-trip-dialog-content-title {
+  margin-bottom: 25px;
+}
+
+#remove-trip-dialog-done {
+  background: $warn;
+  color: white;
+}
+
+#remove-trip-card-content {
+  font-weight: lighter;
+}
+
+.trip-name {
+  font-weight: bolder;
+}
+
+#remove-trip-button-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
+}
+
+#remove-trip-button {
+  width: 50%;
+  background: $warn;
+  color: white;
+}

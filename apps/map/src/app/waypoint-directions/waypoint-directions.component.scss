@@ -1,0 +1,128 @@
+@import "../../trip.theme";
+@import "../../responsive";
+
+#waypoint-directions-container {
+  //width: 400px;
+  padding-bottom: 73px;
+}
+
+#waypoint-directions-radio-group,
+#waypoint-directions-tree,
+#waypoint-directions-card-panel {
+  background: #FAFAFA;
+}
+
+#waypoint-directions-card-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  border-radius: 0;
+}
+
+#waypoint-directions-card-panel-title {
+  font-weight: lighter;
+}
+
+#directions-option {
+  padding-left: 10px;
+  color: $warn
+}
+
+#waypoint-directions-tree-container {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#waypoint-directions-tree-parent-node,
+#waypoint-directions-tree-child-node {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+}
+
+#waypoint-directions-img {
+  padding-left: 20px;
+  width: 30px;
+}
+
+#waypoint-directions-card-panel-description {
+  font-size: small;
+  width: 70%;
+}
+
+#waypoint-directions-child-text-container {
+  padding-left: 10px;
+}
+
+#waypoint-directions-parent-button-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  align-items: center;
+}
+
+#waypoint-directions-parent-button-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  @include lt-md {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+#waypoint-directions-leg-container {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  font-size: small;
+  font-weight: lighter;
+  padding-top: 3px;
+  margin-left: 20px;
+}
+
+#waypoint-directions-leg-duration,
+#waypoint-directions-leg-distance {
+  display: flex;
+  padding-top: 4px;
+  justify-content: flex-end;
+}
+
+#waypoint-directions-leg-duration {
+  color: $primary;
+}
+
+#waypoint-directions-leg-distance {
+  margin-left: 8px;
+}
+
+#waypoint-directions-card {
+  border-radius: 0;
+}
+
+#waypoint-directions-card-content {
+  color: gray;
+  font-size: smaller;
+}
+
+.waypoint-directions-route-radio {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+#waypoint-directions-route {
+  width: 100%
+}
+
+.waypoint-directions-selected-route-radio-container {
+  display: flex;
+  align-content: center;
+}
+
+#waypoint-directions-card-panel-title-container {
+  flex-grow: 1;
+}

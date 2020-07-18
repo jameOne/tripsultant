@@ -1,0 +1,31 @@
+<div id="remove-trip-button-container">
+  <button id="remove-trip-mat-stroked-button"
+          *ngIf="displayType === 'mat-stroked-button'"
+          mat-stroked-button
+          color="warn"
+          matTooltip="Click here to remove the selected map."
+          (click)="openRemoveTripDialog()"
+          [disabled]="(selectedTripIndex$ | async) === -1">
+    Remove Trip
+  </button>
+  <button id="remove-trip-mat-raised-button"
+          *ngIf="displayType === 'mat-raised-button'"
+          mat-raised-button
+          color="warn"
+          matTooltip="Click here to remove the selected map."
+          (click)="openRemoveTripDialog()"
+          [disabled]="(selectedTripIndex$ | async) === -1">
+    Remove Trip
+  </button>
+  <button id="remove-trip-mat-mini-fab-button"
+          *ngIf="displayType === 'mat-mini-fab-button'"
+          mat-mini-fab
+          color="warn"
+          matTooltip="Click here to remove the selected map."
+          (click)="openRemoveTripDialog()"
+          [disabled]="(selectedTripIndex$ | async) === -1">
+    <mat-icon id="remove-trip-mat-mini-fab-button-icon">
+      remove
+    </mat-icon>
+  </button>
+</div>

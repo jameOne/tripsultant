@@ -1,0 +1,65 @@
+#dashboard-greeting-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+#sidenav-toggle-button-container {
+  z-index: 1000;
+  position: absolute;
+  display: flex;
+  align-self: center;
+  width: 22px;
+}
+
+#sidenav-toggle-button {
+  width: 100%;
+}
+
+
+#dashboard-greeting-card-container {
+  z-index: 999;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+}
+
+#dashboard-greeting-card {
+  background: #FAFAFA;
+  margin: 3%;
+  max-height: 300px;
+}
+
+#dashboard-greeting-card-content {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+  min-width: 200px;
+}
+
+#add-trip-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+#trip-tab-group {
+  height: 100%;
+
+}
+
+.mat-sidenav-content {
+  margin-left: 0 !important;
+}
+
+.card-content {
+  padding-top: 1em;
+}
+
+.card-title {
+  padding-top: 0.25em;
+  font-weight: lighter;
+}

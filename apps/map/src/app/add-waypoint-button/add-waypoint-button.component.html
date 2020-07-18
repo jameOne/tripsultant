@@ -1,0 +1,26 @@
+<div id="add-waypoint-button-container">
+  <button id="add-waypoint-mat-raised-button"
+          *ngIf="displayType === 'mat-raised-button'"
+          mat-raised-button
+          color="accent"
+          (click)="onClick()"
+          [disabled]="(selectedTripIndex === -1)">
+    Add Waypoint
+  </button>
+  <button id="add-waypoint-mat-stroked-button"
+          *ngIf="displayType === 'mat-stroked-button'"
+          mat-stroked-button
+          color="accent"
+          (click)="onClick()"
+          [disabled]="(selectedTripIndex === -1)">
+    Add Waypoint
+  </button>
+  <button id="add-waypoint-mat-mini-fab-button"
+          *ngIf="displayType === 'mat-mini-fab-button'"
+          mat-mini-fab
+          color="accent"
+          (click)="onClick()"
+          [disabled]="(selectedTripIndex === -1)">
+    <mat-icon id="add-waypoint-mat-mini-fab-button-icon">add</mat-icon>
+  </button>
+</div>

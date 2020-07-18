@@ -1,0 +1,17 @@
+@import "../../trip.theme";
+@import "../../responsive";
+
+#add-trip-button-container {
+  width: 100%;
+  display: flex;
+  align-self: start;
+
+  @include lt-sm {
+    align-self: end;
+  }
+}
+
+#add-trip-mat-stroked-button,
+#add-trip-mat-raised-button {
+  width: 100%;
+}

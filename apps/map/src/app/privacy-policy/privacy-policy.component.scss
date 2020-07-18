@@ -1,0 +1,52 @@
+@import "../../responsive";
+
+#privacy-policy-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 200px);
+}
+
+#privacy-policy-information-card {
+  margin: 5%;
+  padding: 5%;
+  overflow-y: scroll;
+}
+
+#privacy-policy-card-content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#privacy-policy-logo-container {
+  margin-right: 5%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#privacy-policy-logo {
+  @include xs {
+    width: 200px;
+  }
+  @include sm {
+    width: 300px;
+  }
+  @include md {
+    width: 400px;
+  }
+  @include lg {
+    width: 500px;
+  }
+  @include xl {
+    width: 600px;
+  }
+}
+
+#privacy-policy-footer-container {
+  min-width: 100%;
+  position: absolute;
+  bottom: 0;
+}

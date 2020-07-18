@@ -1,0 +1,18 @@
+@import "../../responsive";
+@import "../../trip.theme";
+
+#add-waypoint-button-container {
+  width: 100%;
+  display: flex;
+  align-self: start;
+
+  @include lt-sm {
+    align-self: end;
+  }
+}
+
+#add-waypoint-mat-stroked-button,
+#add-waypoint-mat-raised-button {
+  width: 100%;
+}
+

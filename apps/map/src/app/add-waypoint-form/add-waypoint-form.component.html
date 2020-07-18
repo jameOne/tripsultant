@@ -1,0 +1,13 @@
+<form id="add-waypoint-form"
+      [formGroup]="waypointFormGroup"
+      (ngSubmit)="onSubmit()">
+  <tripsultant-apps-map-location-autocomplete
+    id="add-waypoint-location-autocomplete"
+    inputPlaceholder="Add a point to your itinerary."
+    inputRequired="true"
+    (selectedLocation)="getLocationFromEvent($event)">
+  </tripsultant-apps-map-location-autocomplete>
+  <button id="add-waypoint-hidden-submit-button"
+          type="submit"
+          hidden></button>
+</form>

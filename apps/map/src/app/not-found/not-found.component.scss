@@ -1,0 +1,64 @@
+@import "../../responsive";
+
+#not-found-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#not-found-card {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  padding: 5%;
+  max-height: 300px;
+}
+
+#not-found-text-container {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+}
+
+#not-found-status-code-container {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large
+}
+
+#not-found-logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+#not-found-logo {
+  @include xs {
+    width: 200px;
+  }
+  @include sm {
+    width: 300px;
+  }
+  @include md {
+    width: 400px;
+  }
+  @include lg {
+    width: 500px;
+  }
+  @include xl {
+    width: 600px;
+  }
+}
+
+#not-found-back-button {
+  display: flex;
+  justify-content: center;
+}
+
+.columnar-element {
+  margin-bottom: 25px;
+}

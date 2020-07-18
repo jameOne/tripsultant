@@ -1,0 +1,36 @@
+<form id="add-trip-form"
+      [formGroup]="tripNameFormGroup"
+      (ngSubmit)="onSubmit()">
+  <mat-form-field id="trip-name-form-field">
+    <label id="trip-name-form-field-label"
+           for="trip-name-input"
+           hidden>
+      Choose a trip name.
+    </label>
+    <input id="trip-name-input"
+           matInput
+           type="text"
+           formControlName="name"
+           placeholder="Something memorable ..."
+           required autofocus/>
+    <mat-error id="add-trip-form-name-is-not-unique-error"
+               *ngIf="tripNameFormGroup.get('name').hasError('nameIsNotUnique')">
+      Sorry, that name is already being used.
+    </mat-error>
+    <mat-error id="add-trip-form-min-length"
+               *ngIf="tripNameFormGroup.get('name').hasError('minlength')">
+      Sorry, that name is too short.
+    </mat-error>
+    <mat-error id="add-trip-form-max-length"
+               *ngIf="tripNameFormGroup.get('name').hasError('maxlength')">
+      Sorry, that name is too long.
+    </mat-error>
+    <mat-error id="add-trip-form-required"
+               *ngIf="tripNameFormGroup.get('name').hasError('required')">
+      Please choose a name.
+    </mat-error>
+  </mat-form-field>
+  <button id="add-trip-hidden-submit-button"
+          type="submit"
+          hidden></button>
+</form>

@@ -1,0 +1,84 @@
+<mat-card id="sidenav-search-bar-card">
+  <mat-card-content id="sidenav-search-bar-card-content">
+    <div id="sidenav-search-bar-card-content-container">
+      <div class="sidenav-search-bar-row" id="sidenav-search-bar-card-content-row-logo">
+        <div id="sidenav-search-bar-logo-container">
+          <img id="sidenav-search-bar-logo"
+               alt="Tripsultant"
+               [src]="tripsultantLogo">
+        </div>
+        <div id="add-trip-button-container">
+          <tripsultant-apps-map-add-trip-button displayType="mat-stroked-button"></tripsultant-apps-map-add-trip-button>
+        </div>
+        <div id="remove-trip-button-container">
+          <tripsultant-apps-map-remove-trip-button
+            displayType="mat-stroked-button"></tripsultant-apps-map-remove-trip-button>
+        </div>
+      </div>
+      <div class="sidenav-search-bar-row" id="sidenav-search-bar-card-content-row-name">
+        <h1 id="sidenav-current-trip-name">
+          {{currentTrip?.name}}
+        </h1>
+        <button mat-icon-button matTooltip="Edit trip details.">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <div id="sidenav-search-bar-trip-length">
+          <!--          <div id="sidenav-search-bar-duration-container"-->
+          <!--               [@fadeInAndOut]-->
+          <!--               *ngIf="stringFormattedDuration-->
+          <!--               && (stringFormattedDuration !== '0 min')">-->
+          <!--            <h3 id="sidenav-search-bar-duration">-->
+          <!--              {{stringFormattedDuration}}-->
+          <!--            </h3>-->
+          <!--          </div>-->
+          <!--          <div id="sidenav-search-bar-distance-container"-->
+          <!--               [@fadeInAndOut]-->
+          <!--               *ngIf="stringFormattedDistance-->
+          <!--               && (stringFormattedDistance !== '(0 m)')">-->
+          <!--            <h3 id="sidenav-search-bar-distance">-->
+          <!--              {{stringFormattedDistance}}-->
+          <!--            </h3>-->
+          <!--          </div>-->
+        </div>
+      </div>
+      <div class="sidenav-search-bar-row"
+           id="sidenav-search-bar-date-range-picker-row">
+        <div id="sidenav-search-bar-date-range-picker">
+          <tripsultant-apps-map-trip-date-range-picker></tripsultant-apps-map-trip-date-range-picker>
+        </div>
+        <div id="sidenav-search-bar-add-waypoint">
+          <tripsultant-apps-map-add-waypoint-button></tripsultant-apps-map-add-waypoint-button>
+        </div>
+      </div>
+      <div id="sidenav-waypoint-drag-and-drop-row">
+        <tripsultant-apps-map-waypoint-drag-and-drop></tripsultant-apps-map-waypoint-drag-and-drop>
+      </div>
+      <div class="sidenav-search-bar-row" id="transit-mode-options">
+        <button (click)="selectCarDirections()" mat-icon-button>
+          <mat-icon matTooltip="Automobile directions."
+                    [style.color]="directionsModeSelectionState !== 0 ? 'gray' : 'black'">
+            directions_car
+          </mat-icon>
+        </button>
+        <button (click)="selectTransitDirections()" mat-icon-button>
+          <mat-icon matTooltip="Public transit directions."
+                    [style.color]="directionsModeSelectionState !== 1 ? 'gray' : 'black'">
+            directions_transit
+          </mat-icon>
+        </button>
+        <button (click)="selectWalkingDirections()" mat-icon-button>
+          <mat-icon matTooltip="Walking directions."
+                    [style.color]="directionsModeSelectionState !== 2 ? 'gray' : 'black'">
+            directions_walk
+          </mat-icon>
+        </button>
+        <button (click)="selectFlyingDirections()" mat-icon-button [disabled]="true">
+          <mat-icon matTooltip="Sorry, this service is unavailable at the moment."
+                    color="{{directionsModeSelectionState !== 3 ? 'gray' : 'black'}}">
+            local_airport
+          </mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

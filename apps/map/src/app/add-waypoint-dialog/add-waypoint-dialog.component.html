@@ -1,0 +1,26 @@
+<mat-dialog-content id="add-waypoint-dialog-content">
+  <mat-card class="mat-elevation-z0">
+    <mat-card-title id="add-waypoint-dialog-content-card"
+                    [style.margin-bottom]="'25px'">
+      Location
+    </mat-card-title>
+    <mat-card-content>
+      <tripsultant-apps-map-add-waypoint-form id="add-waypoint-from"
+                                              (waypointLocation)="addWaypoint($event)">
+      </tripsultant-apps-map-add-waypoint-form>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+
+<mat-dialog-actions id="add-waypoint-dialog-actions">
+  <button id="add-waypoint-dialog-done-button"
+          mat-raised-button color="primary"
+          (click)="onSubmit()">
+    Done
+  </button>
+  <button id="add-waypoint-dialog-cancel-button"
+          mat-button
+          (click)="closeDialog()">
+    Cancel
+  </button>
+</mat-dialog-actions>

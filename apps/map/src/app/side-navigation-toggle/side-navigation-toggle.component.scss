@@ -1,0 +1,18 @@
+@import "../../trip.theme";
+
+button {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 100%;
+  flex: 1;
+  right: 42px;
+  padding-right: 2px;
+  border: 1px gray;
+}
+
+.mat-icon {
+  color: white;
+}

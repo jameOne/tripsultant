@@ -1,0 +1,22 @@
+<mat-form-field id="trip-date-range-picker-form-field">
+  <mat-label>Departure - Return (date)</mat-label>
+  <mat-date-range-input id="trip-date-range-picker-date-range-input"
+                        [formGroup]="rangeFormGroup"
+                        [rangePicker]="picker">
+    <input id="start-date"
+           formControlName="start"
+           matStartDate
+           matInput
+           placeholder="Start date."
+           aria-label="Start date.">
+    <input id="end-date"
+           formControlName="end"
+           matEndDate
+           matInput
+           placeholder="End date."
+           aria-label="End date.">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker (closed)="dateRangePickerClosed()"
+                         [touchUi]="screenWidthLtMd" #picker></mat-date-range-picker>
+</mat-form-field>

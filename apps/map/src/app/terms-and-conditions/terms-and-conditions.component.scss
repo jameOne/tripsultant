@@ -1,0 +1,49 @@
+@import "../../responsive";
+
+#terms-and-conditions-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: calc(100vh - 200px);
+  padding: 5%;
+}
+
+#terms-and-conditions-card {
+  padding: 50px;
+  overflow-y: scroll;
+}
+
+#terms-and-conditions-logo-container {
+  justify-content: center;
+  align-content: center;
+}
+
+#terms-and-conditions-logo {
+  @include xs {
+    width: 200px;
+  }
+  @include sm {
+    width: 300px;
+  }
+  @include md {
+    width: 400px;
+  }
+  @include lg {
+    width: 500px;
+  }
+  @include xl {
+    width: 600px;
+  }
+}
+
+#terms-and-conditions-card-content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#terms-and-conditions-footer-container {
+  min-width: 100%;
+  position: absolute;
+  bottom: 0;
+}

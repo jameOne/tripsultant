@@ -1,0 +1,62 @@
+<div id="map"
+     leaflet
+     [leafletCenter]="currentCenterCoordinate"
+     [leafletZoom]="currentZoomLevel"
+     [leafletLayers]="(layers.length === 0) ? undefined : layers"
+     [leafletLayersControlOptions]="layerControlOptions"
+     [leafletBaseLayers]="baseLayers"
+     (leafletZoomChange)="mapZoom($event)"
+     [leafletFitBounds]="tripBounds"
+     [leafletOptions]="mapOptions"
+     (leafletCenterChange)="mapRecenter($event)">
+  <div id="sidenav-toggle-button-container">
+    <div id="sidenav-toggle-button" aria-label="Toggle side navigation panel.">
+      <tripsultant-apps-map-side-navigation-toggle></tripsultant-apps-map-side-navigation-toggle>
+    </div>
+  </div>
+  <mat-progress-bar mode="query"></mat-progress-bar>
+  <div id="map-controls-container">
+    <button id="zoom-in-button"
+            #zoomIn
+            (click)="mapZoomIn()"
+            mat-mini-fab
+            aria-label="Zoom in.">
+      <mat-icon color="primary">
+        add
+      </mat-icon>
+    </button>
+    <button id="zoom-out-button"
+            #zoomOut
+            (click)="mapZoomOut()"
+            mat-mini-fab
+            aria-label="Center view port.">
+      <mat-icon color="primary">
+        remove
+      </mat-icon>
+    </button>
+    <button id="center-view-port-button"
+            #centerFocus
+            (click)="refitToBounds()"
+            mat-mini-fab
+            aria-label="Center view port.">
+      <mat-icon *ngIf="!(centerEqualsCentroid)" color="primary">
+        center_focus_weak
+      </mat-icon>
+      <mat-icon *ngIf="centerEqualsCentroid" color="primary">
+        center_focus_strong
+      </mat-icon>
+    </button>
+    <button id="near-me-button"
+            #nearMe
+            (click)="toggleGPSFixed()"
+            mat-mini-fab
+            aria-label="Center view port.">
+      <mat-icon *ngIf="!(gpsFixed)" color="primary">
+        gps_not_fixed
+      </mat-icon>
+      <mat-icon *ngIf="gpsFixed" color="primary">
+        gps_fixed
+      </mat-icon>
+    </button>
+  </div>
+</div>

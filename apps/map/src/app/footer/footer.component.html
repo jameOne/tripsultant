@@ -1,0 +1,65 @@
+<div id="footer-container">
+  <mat-toolbar id="footer-toolbar">
+    <mat-toolbar-row id="footer-toolbar-row-spacer"></mat-toolbar-row>
+    <mat-toolbar-row id="footer-toolbar-row-0">
+      <div id="footer-toolbar-row-0-site-links">
+        <div class="footer-toolbar-link">
+          <a routerLink="/dashboard">Dashboard</a>
+        </div>
+        <div class="footer-toolbar-link">
+          <a routerLink="/contact-information">Contact Info</a>
+        </div>
+        <div class="footer-toolbar-link">
+          <a routerLink="/terms-and-conditions">Terms</a>
+        </div>
+        <div class="footer-toolbar-link">
+          <a routerLink="/privacy-policy">Privacy</a>
+        </div>
+      </div>
+      <div id="footer-toolbar-row-0-social-links">
+        <div class="footer-toolbar-link">
+          <a [href]="socialHyperlinks.github">Github</a>
+        </div>
+        <div class="footer-toolbar-link">
+          <a [href]="socialHyperlinks.linkedIn">LinkedIn</a>
+        </div>
+        <div class="footer-toolbar-link">
+          <a [href]="socialHyperlinks.facebook">Facebook</a>
+        </div>
+        <div class="footer-toolbar-link">
+          <a [href]="socialHyperlinks.twitter">Twitter</a>
+        </div>
+      </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row id="footer-toolbar-row-1">
+      <div id="footer-logo-container">
+        <img id="footer-logo"
+             [src]="assetMapping.tripsultantWhiteLogo"
+             alt="Tripsultant">
+        <span id="copyright"> &copy; 2020</span>
+      </div>
+      <div id="footer-social-logo-container">
+        <a class="footer-social-link"
+           [href]="socialHyperlinks.github">
+          <img alt="GitHub"
+               [src]="assetMapping.githubWhiteSocial">
+        </a>
+        <a class="footer-social-link"
+           [href]="socialHyperlinks.linkedIn">
+          <img alt="LinkedIn"
+               [src]="assetMapping.linkedInWhiteSocial">
+        </a>
+        <a class="footer-social-link"
+           [href]="socialHyperlinks.facebook">
+          <img alt="Facebook"
+               [src]="assetMapping.facebookWhiteSocial">
+        </a>
+        <a class="footer-social-link"
+           [href]="socialHyperlinks.twitter">
+          <img alt="Twitter"
+               [src]="assetMapping.twitterWhiteSocial">
+        </a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

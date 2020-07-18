@@ -1,0 +1,24 @@
+<div id="not-found-container">
+  <mat-card id="not-found-card">
+    <mat-card-content id="not-found-card-content">
+      <div class="columnar-element" id="not-found-logo-container">
+        <img id="not-found-logo"
+             alt="Tripsultant"
+             [src]="tripsultantLogo">
+      </div>
+      <div class="columnar-element" id="not-found-status-code-container">
+        <span>404: Not found.</span>
+      </div>
+      <div class="columnar-element" id="not-found-text-container">
+        Either you're lost or someone should be fired.
+        Whatever the case, we're sorry we couldn't find the page you're after.
+      </div>
+      <div class="columnar-element" id="not-found-back-button">
+        <button id="back-button"
+                routerLink="/dashboard" mat-raised-button color="accent">
+          Back to civilization.
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

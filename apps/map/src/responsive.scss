@@ -1,0 +1,101 @@
+// These mixins follow the angular flex-layout media queries.
+
+// xs
+$upper-xs-width: 599px;
+
+// sm
+$lower-sm-width: $upper-xs-width + 1px;
+$upper-sm-width: 959px;
+
+// md
+$lower-md-width: $upper-sm-width + 1px;
+$upper-md-width: 1279px;
+
+// lg
+$lower-lg-width: $upper-md-width + 1px;
+$upper-lg-width: 1919px;
+
+// xl
+$lower-xl-width: $upper-lg-width + 1px;
+$upper-xl-width: 5000px;
+
+// Sizes
+@mixin xs {
+  @media screen and (max-width: #{$upper-xs-width}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (min-width: #{$lower-sm-width}) and (max-width: #{$upper-sm-width}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (min-width: #{$lower-md-width}) and (max-width: #{$upper-md-width}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: #{$lower-lg-width}) and (max-width: #{$upper-lg-width}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: #{$lower-xl-width}) and (max-width: #{$upper-xl-width}) {
+    @content;
+  }
+}
+
+// Less than.
+@mixin lt-sm {
+  @media screen and (max-width: #{$upper-xs-width}) {
+    @content;
+  }
+}
+
+@mixin lt-md {
+  @media screen and (max-width: #{$upper-sm-width}) {
+    @content;
+  }
+}
+
+@mixin lt-lg {
+  @media screen and (max-width: #{$upper-md-width}) {
+    @content;
+  }
+}
+
+@mixin lt-xl {
+  @media screen and (max-width: #{$upper-lg-width}) {
+    @content;
+  }
+}
+
+// Greater than.
+@mixin gt-xs {
+  @media screen and (min-width: #{$lower-sm-width}) {
+    @content;
+  }
+}
+
+@mixin gt-sm {
+  @media screen and (min-width: #{$lower-md-width}) {
+    @content;
+  }
+}
+
+@mixin gt-md {
+  @media screen and (min-width: #{$lower-lg-width}) {
+    @content;
+  }
+}
+
+@mixin gt-lg {
+  @media screen and (min-width: #{$lower-xl-width}) {
+    @content;
+  }
+}

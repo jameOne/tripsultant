@@ -1,0 +1,44 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "outDir": "../../dist/out-tsc",
+    "module": "commonjs",
+    "types": ["jest", "node"],
+    "baseUrl": "./",
+    "paths": {
+      "~app/*": [
+        "src/app/*"
+      ],
+      "~assets/*": [
+        "src/assets/*"
+      ],
+      "~environments/*": [
+        "src/environments/*"
+      ],
+      "~guards/*": [
+        "src/guards/*"
+      ],
+      "~interceptors/*": [
+        "src/interceptors/*"
+      ],
+      "~leaflet/*": [
+        "src/leaflet/*"
+      ],
+      "~models/*": [
+        "src/models/*"
+      ],
+      "~services/*": [
+        "src/services/*"
+      ],
+      "~store/*": [
+        "src/store/*.ts"
+      ],
+      "~style/*": [
+        "src/*.scss"
+      ]
+    }
+  },
+  "files": ["src/test-setup.ts"],
+  "include": ["**/*.spec.ts", "**/*.d.ts"]
+}

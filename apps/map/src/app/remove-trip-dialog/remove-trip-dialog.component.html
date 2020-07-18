@@ -1,0 +1,28 @@
+<mat-dialog-content id="remove-trip-dialog-content">
+  <mat-card class="mat-elevation-z0">
+    <mat-card-title id="remove-trip-dialog-content-title">
+      This action is irreversible.
+    </mat-card-title>
+    <mat-card-content id="remove-trip-card-content">
+      <p>
+        Are you sure you want to get rid of the trip labelled "
+        <span class="trip-name">{{ selectedTrip?.name }}</span>"?
+      </p>
+      <br>
+      <p>
+        This will remove the map under the tab labelled
+        "<span class="trip-name">{{ selectedTrip?.name }}</span>",
+        and all other data related to the trip.
+      </p>
+      <div id="remove-trip-button-container">
+        <button id="remove-trip-button"
+                mat-raised-button
+                (click)="deleteTrip()">Remove
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">Cancel</button>
+</mat-dialog-actions>

@@ -1,0 +1,65 @@
+@import "../../responsive";
+@import "../../trip.theme";
+
+#sidenav-container {
+  height: 100%;
+}
+
+#sidenav {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 30px;
+  border-radius: 0 8px 0 0;
+  @include gt-sm {
+    width: 400px;
+    margin-top: 0;
+    border-radius: 0;
+  }
+}
+
+#slide-counter {
+  display: flex;
+  flex-direction: row;
+}
+
+#sidenav-toggle-button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  margin-right: 0;
+  margin-top: 128px;
+  right: 16px;
+}
+
+#sidenav-controls {
+  border-radius: 0;
+  background: #ECEFF1;
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0;
+  width: 100%;
+}
+
+#button-toggle-group-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#sidenav-content {
+  background: #FAFAFA;
+  margin-top: 0;
+}
+
+#close-sidenav-controls-toggle {
+  background: $primary;
+}
+
+#close-sidenav-controls-toggle-chevron {
+  color: white;
+}
+
+.controls-icon {
+  color: gray;
+}

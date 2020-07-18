@@ -1,0 +1,59 @@
+@import "../../responsive";
+
+#contact-information-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 200px);
+}
+
+#contact-information-card {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-self: center;
+  margin: 5%;
+  max-height: 500px;
+  padding: 5%;
+
+  @include lt-md {
+    flex-direction: column;
+  }
+}
+
+#contact-information-logo-container {
+  margin-right: 5%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#contact-information-logo {
+  @include xs {
+    width: 200px;
+  }
+  @include sm {
+    width: 300px;
+  }
+  @include md {
+    width: 400px;
+  }
+  @include lg {
+    width: 500px;
+  }
+  @include xl {
+    width: 600px;
+  }
+}
+
+#contact-information-card-content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#contact-information-footer-container {
+  min-width: 100%;
+  position: absolute;
+  bottom: 0;
+}

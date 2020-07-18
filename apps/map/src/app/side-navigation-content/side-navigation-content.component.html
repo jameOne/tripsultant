@@ -1,0 +1,41 @@
+<div id="dashboard-greeting-container" *ngIf="numOfTrips === 0">
+  <div id="sidenav-toggle-button-container">
+    <tripsultant-apps-map-side-navigation-toggle
+      id="sidenav-toggle-button"></tripsultant-apps-map-side-navigation-toggle>
+  </div>
+  <div id="dashboard-greeting-card-container">
+    <mat-card id="dashboard-greeting-card"
+              [@swingInAndOut]>
+      <mat-card-title class="card-title">
+        Getting Started
+      </mat-card-title>
+      <mat-card-content id="dashboard-greeting-card-content">
+        <div id="dashboard-greeting-card-text-container">
+          <p>
+            Start planning your next route by adding a trip!
+          </p>
+        </div>
+        <div id="add-trip-button-container">
+          <tripsultant-apps-map-add-trip-button [displayType]=" screenWidthGtXs
+            ? 'mat-raised-button' : 'mat-mini-fab-button' "></tripsultant-apps-map-add-trip-button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<mat-tab-group id="trip-tab-group"
+               *ngIf="numOfTrips !== 0"
+               (selectedTabChange)="selectTrip($event)"
+               [selectedIndex]="selectedTripIndex">
+  <mat-tab
+    *ngFor="let trip of trips; let i = index; trackBy: trackBy"
+    [label]="trip.name">
+    <ng-template matTabContent>
+      <ng-container>
+        <tripsultant-apps-map-map-view [tripIndex]="i"
+                                       (interactionHistoryEvent)="setInteractionHistory(i, $event)">
+        </tripsultant-apps-map-map-view>
+      </ng-container>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>
