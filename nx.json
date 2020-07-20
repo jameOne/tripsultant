@@ -28,6 +28,9 @@
     "map-e2e": {
       "tags": [],
       "implicitDependencies": ["map"]
+    },
+    "google-maps-proxy": {
+      "tags": []
     }
   }
 }

@@ -120,6 +120,62 @@
           }
         }
       }
+    },
+    "google-maps-proxy": {
+      "root": "apps/google-maps-proxy",
+      "sourceRoot": "apps/google-maps-proxy/src",
+      "projectType": "application",
+      "prefix": "google-maps-proxy",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/google-maps-proxy",
+            "main": "apps/google-maps-proxy/src/main.ts",
+            "tsConfig": "apps/google-maps-proxy/tsconfig.app.json",
+            "assets": ["apps/google-maps-proxy/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/google-maps-proxy/src/environments/environment.ts",
+                  "with": "apps/google-maps-proxy/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "google-maps-proxy:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "tsConfig": [
+              "apps/google-maps-proxy/tsconfig.app.json",
+              "apps/google-maps-proxy/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/google-maps-proxy/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/google-maps-proxy/jest.config.js",
+            "tsConfig": "apps/google-maps-proxy/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
