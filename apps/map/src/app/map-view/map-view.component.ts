@@ -48,15 +48,15 @@ import {
   selectSelectedRouteIndex
 } from '~store/selectors/directions/directions.selectors';
 import { updateSelectedRoute } from '~store/actions/directions/directions.actions';
-import {
-  selectGPSFixed,
-  selectLastNavigatorGeolocation
-} from '~store/selectors/navigator-geolocation/navigator-geolocation.selectors';
-import {
-  toggleGPSFixedBoolean
-} from '~store/actions/navigator-geolocation/navigator-geolocation.actions';
-import { NavigatorGeolocationInterface } from '~models/navigation-geolocation/navigation-geolocation.interface';
+// import {
+//   selectGPSFixed,
+//   selectLastNavigatorGeolocation
+// } from '~store/selectors/navigator-geolocation/navigator-geolocation.selectors';
+// import {
+//   toggleGPSFixedBoolean
+// } from '~store/actions/navigator-geolocation/navigator-geolocation.actions';
 import { selectSideNavigation } from '~store/selectors/side-navigation/side-navigation.selectors';
+import { INavigatorGeolocation } from '@tripsultant/ngrx-analytics';
 
 @Component({
   selector: 'tripsultant-apps-map-map-view',
@@ -98,7 +98,7 @@ export class MapViewComponent implements OnInit {
   selectedTripIndex: number;
   gpsFixed$: Observable<boolean>;
   gpsFixed: boolean;
-  geolocation$: Observable<NavigatorGeolocationInterface>;
+  geolocation$: Observable<INavigatorGeolocation>;
   geolocationMarker: Marker;
   geolocationCircle: Circle;
 
@@ -123,8 +123,8 @@ export class MapViewComponent implements OnInit {
     this.routeIndices$ = store.pipe(select(selectSelectedRouteIndex));
     this.interactionHistory = { zoomHistory: [], centerHistory: [] };
     this.selectedTripIndex$ = store.pipe(select(selectSelectedTripIndex));
-    this.gpsFixed$ = store.pipe(select(selectGPSFixed));
-    this.geolocation$ = store.pipe(select(selectLastNavigatorGeolocation));
+    // this.gpsFixed$ = store.pipe(select(selectGPSFixed));
+    // this.geolocation$ = store.pipe(select(selectLastNavigatorGeolocation));
     this.layers = [];
     this.layerControlOptions = {
       position: 'topleft'
@@ -286,7 +286,7 @@ export class MapViewComponent implements OnInit {
 
   toggleGPSFixed(): void {
     console.log('TOGGLE');
-    this.store.dispatch(toggleGPSFixedBoolean());
+    // this.store.dispatch(toggleGPSFixedBoolean());
   }
 
   refitToBounds(): void {

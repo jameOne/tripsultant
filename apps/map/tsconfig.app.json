@@ -32,7 +32,8 @@
       ],
       "~store/*": [
         "src/store/*"
-      ]
+      ],
+      "@tripsultant/ngrx-analytics": ["../../libs/ngrx-analytics/src/index.ts"]
     }
   },
   "files": ["src/main.ts", "src/polyfills.ts"]

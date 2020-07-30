@@ -4,7 +4,7 @@ import { fetch } from '@nrwl/angular';
 
 import * as fromMediaQueries from './media-queries.reducer';
 import * as MediaQueriesActions from './media-queries.actions';
-import { MediaQueriesEntity } from '@tripsultant/ngrx-analytics';
+import { MediaQueriesEntity } from './media-queries.models';
 
 @Injectable()
 export class MediaQueriesEffects {
