@@ -74,11 +74,10 @@ import { WaypointDirectionsComponent } from './waypoint-directions/waypoint-dire
 import { TripsultantChatComponent } from './tripsultant-chat/tripsultant-chat.component';
 import { NoSanitizePipe } from './no-sanitize.pipe';
 import { SideNavigationToggleComponent } from './side-navigation-toggle/side-navigation-toggle.component';
-import { MediaQueryComponent } from './media-query/media-query.component';
 import { TripDateRangePickerComponent } from './trip-date-range-picker/trip-date-range-picker.component';
 import { TripDetailComponent } from './trip-detail/trip-detail.component';
 import { TransitDirectionsInformationComponent } from './transit-directions-information/transit-directions-information.component';
-import { NavigatorGeolocationComponent } from './navigator-geolocation/navigator-geolocation.component';
+import { NgrxAnalyticsModule } from '../../../../libs/ngrx-analytics/src';
 
 
 @NgModule({
@@ -117,11 +116,9 @@ import { NavigatorGeolocationComponent } from './navigator-geolocation/navigator
     TripsultantChatComponent,
     NoSanitizePipe,
     SideNavigationToggleComponent,
-    MediaQueryComponent,
     TripDateRangePickerComponent,
     TripDetailComponent,
     TransitDirectionsInformationComponent,
-    NavigatorGeolocationComponent
   ],
   imports: [
     BrowserModule,
@@ -134,6 +131,7 @@ import { NavigatorGeolocationComponent } from './navigator-geolocation/navigator
     FormsModule,
     LeafletModule,
     DragDropModule,
+    NgrxAnalyticsModule,
     StoreModule.forRoot(appReducers),
     EffectsModule.forRoot([TripEffects]),
     StoreRouterConnectingModule.forRoot({ stateKey: 'router' }),
@@ -146,8 +144,6 @@ import { NavigatorGeolocationComponent } from './navigator-geolocation/navigator
   ],
   bootstrap: [
     AppComponent,
-    MediaQueryComponent,
-    NavigatorGeolocationComponent
   ]
 })
 export class AppModule {

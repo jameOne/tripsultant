@@ -79,15 +79,15 @@ export class LeafletDirective
   @Output('leafletMapZoomStart') onMapZoomStart = new EventEmitter<LeafletEvent>();
   @Output('leafletMapZoomEnd') onMapZoomEnd = new EventEmitter<LeafletEvent>();
 
-  sidenavOpen$: Observable<boolean>;
-  sidenavOpen: boolean;
+  // sidenavOpen$: Observable<boolean>;
+  // sidenavOpen: boolean;
 
   constructor(
     private element: ElementRef,
     private zone: NgZone,
-    private store: Store<AppStateInterface>
+    // private store: Store<AppStateInterface>
   ) {
-    this.sidenavOpen$ = store.pipe(select(selectSideNavigation));
+    // this.sidenavOpen$ = store.pipe(select(selectSideNavigation));
   }
 
   ngOnInit() {
@@ -127,11 +127,11 @@ export class LeafletDirective
     // Fire map ready event
     this.mapReady.emit(this.map);
 
-    // When the user toggles the sidenav we want to trigger size invalidation.
-    this.sidenavOpen$.pipe(distinctUntilChanged()).subscribe(sidenavOpen => {
-      this.sidenavOpen = sidenavOpen;
-      this.smoothResize();
-    });
+    // // When the user toggles the sidenav we want to trigger size invalidation.
+    // this.sidenavOpen$.pipe(distinctUntilChanged()).subscribe(sidenavOpen => {
+    //   this.sidenavOpen = sidenavOpen;
+    //   this.smoothResize();
+    // });
   }
 
   ngOnChanges(changes: { [key: string]: SimpleChange }) {
@@ -254,20 +254,16 @@ export class LeafletDirective
     this.resizeTimer = setTimeout(this.doResize.bind(this), 300);
   }
 
-  private invalidateSize(index: number) {
-    setTimeout(() => {
-      this.doResize();
-    }, 10 * index);
-  }
-
-  /**
-   * Smooth resize of map
-   */
-  private smoothResize() {
-    for (let i = 0; i < 30; i++) {
-      this.invalidateSize(i);
-    }
-  }
+  // /**
+  //  * Smooth resize of map
+  //  */
+  // private smoothResize() {
+  //   for (let i = 0; i < 30; i++) {
+  //   setTimeout(() => {
+  //     this.doResize();
+  //   }, 10 * i);
+  //   }
+  // }
 
   /**
    * Set the view (center/zoom) all at once

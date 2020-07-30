@@ -1,22 +1,27 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MediaMatcher } from '@angular/cdk/layout';
+import { Directive, Input, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-
 import {
-  setScreenWidthLg,
-  setScreenWidthMd,
-  setScreenWidthSm,
-  setScreenWidthXl,
-  setScreenWidthXs
-} from '~store/actions/media-query/media-query.actions';
-import { AppStateInterface } from '~store/states/app/app.state';
-import { openSideNavigation } from '~store/actions/side-navigation/side-navigation.actions';
+  addMediaQuery,
+  updateMediaQuery
+} from './media-queries.actions';
+import {
+  MediaQuery,
+  nullMediaQuery,
+  screenWidthLg,
+  screenWidthMd,
+  screenWidthSm,
+  screenWidthXl,
+  screenWidthXs
+} from './media-queries.models';
 
-@Component({
-  selector: 'tripsultant-apps-map-media-query',
-  templateUrl: './media-query.component.html'
+@Directive({
+  selector: '[reAnalyticsMediaQueries]'
 })
-export class MediaQueryComponent implements OnInit, OnDestroy {
+export class MediaQueriesDirective implements OnInit, OnDestroy {
+
+  // mediaQuery
+  currentMediaQuery: MediaQuery;
+
   // screen
   screenQuery: MediaQueryList;
   private readonly screenQueryListener: () => void;
@@ -40,36 +45,45 @@ export class MediaQueryComponent implements OnInit, OnDestroy {
   upperXlQuery: MediaQueryList;
   private readonly xlQueryListener: () => void;
 
+  @Input() private reAnalyticsMediaQueriesId = 'default';
+
   constructor(
-    private store: Store<AppStateInterface>,
-    private media: MediaMatcher
+    private store: Store<Object>,
   ) {
     // screen
-    this.screenQuery = media.matchMedia('screen');
-    this.screenQueryListener = this.screenConditional();
+    this.screenQuery = window.matchMedia('screen');
+    this.screenQueryListener = () => {};
     // xs
-    this.upperXsQuery = media.matchMedia('(max-width: 599px)');
+    this.upperXsQuery = window.matchMedia('(max-width: 599px)');
     this.xsQueryListener = this.screenXsConditional();
     // sm
-    this.lowerSmQuery = media.matchMedia('(min-width: 600px)');
-    this.upperSmQuery = media.matchMedia('(max-width: 959px)');
+    this.lowerSmQuery = window.matchMedia('(min-width: 600px)');
+    this.upperSmQuery = window.matchMedia('(max-width: 959px)');
     this.smQueryListener = this.screenSmConditional();
     // md
-    this.lowerMdQuery = media.matchMedia('(min-width: 960px)');
-    this.upperMdQuery = media.matchMedia('(max-width: 1279px)');
+    this.lowerMdQuery = window.matchMedia('(min-width: 960px)');
+    this.upperMdQuery = window.matchMedia('(max-width: 1279px)');
     this.mdQueryListener = this.screenMdConditional();
     // lg
-    this.lowerLgQuery = media.matchMedia('(min-width: 1280px)');
-    this.upperLgQuery = media.matchMedia('(max-width: 1919px)');
+    this.lowerLgQuery = window.matchMedia('(min-width: 1280px)');
+    this.upperLgQuery = window.matchMedia('(max-width: 1919px)');
     this.lgQueryListener = this.screenLgConditional();
     // xl
-    this.lowerXlQuery = media.matchMedia('(min-width: 1920px)');
-    this.upperXlQuery = media.matchMedia('(max-width: 5000px)');
+    this.lowerXlQuery = window.matchMedia('(min-width: 1920px)');
+    this.upperXlQuery = window.matchMedia('(max-width: 5000px)');
     this.xlQueryListener = this.screenXlConditional();
   }
 
+
   ngOnInit(): void {
-    if (typeof this.media.matchMedia('(min-width: 0px)').addEventListener !== 'undefined') {
+    this.store.dispatch(addMediaQuery({
+      mediaQuery: {
+        id: this.reAnalyticsMediaQueriesId,
+        query: nullMediaQuery
+      }
+    }));
+
+    if (typeof window.matchMedia('(min-width: 0px)').addEventListener !== 'undefined') {
       // screen
       this.screenQuery.addEventListener('change', this.screenQueryListener);
       // xs
@@ -114,7 +128,7 @@ export class MediaQueryComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (typeof this.media.matchMedia('(min-width: 0px)').removeEventListener !== 'undefined') {
+    if (typeof window.matchMedia('(min-width: 0px)').removeEventListener !== 'undefined') {
       // screen
       this.screenQuery.removeEventListener('change', this.screenQueryListener);
       // xs
@@ -155,12 +169,18 @@ export class MediaQueryComponent implements OnInit, OnDestroy {
     }
   }
 
-  // Class methods.
-  // screen
-  screenConditional(): () => void {
-    return () => {
-    };
+  private dispatchMediaQuery(): void {
+    this.store.dispatch(updateMediaQuery({
+      update: {
+        id: this.reAnalyticsMediaQueriesId,
+        changes: {
+          query: this.currentMediaQuery
+        }
+      }
+    }));
   }
+
+  // Class methods.
 
   // xs
   screenXsConditional(): () => void {
@@ -173,7 +193,8 @@ export class MediaQueryComponent implements OnInit, OnDestroy {
   }
 
   private notifyStoreScreenWidthXs(): void {
-    this.store.dispatch(setScreenWidthXs());
+    this.currentMediaQuery = screenWidthXs;
+    this.dispatchMediaQuery();
   }
 
   // sm
@@ -188,7 +209,8 @@ export class MediaQueryComponent implements OnInit, OnDestroy {
   }
 
   private notifyStoreScreenWidthSm(): void {
-    this.store.dispatch(setScreenWidthSm());
+    this.currentMediaQuery = screenWidthSm;
+    this.dispatchMediaQuery();
   }
 
   // md
@@ -203,7 +225,8 @@ export class MediaQueryComponent implements OnInit, OnDestroy {
   }
 
   private notifyStoreScreenWidthMd(): void {
-    this.store.dispatch(setScreenWidthMd());
+    this.currentMediaQuery = screenWidthMd;
+    this.dispatchMediaQuery();
   }
 
   // lg
@@ -218,7 +241,8 @@ export class MediaQueryComponent implements OnInit, OnDestroy {
   }
 
   private notifyStoreScreenWidthLg(): void {
-    this.store.dispatch(setScreenWidthLg());
+    this.currentMediaQuery = screenWidthLg;
+    this.dispatchMediaQuery();
   }
 
   // xl
@@ -233,39 +257,24 @@ export class MediaQueryComponent implements OnInit, OnDestroy {
   }
 
   private notifyStoreScreenWidthXl(): void {
-    this.store.dispatch(setScreenWidthXl());
-  }
-
-  private requestSidenavOpened(): void {
-    this.store.dispatch(openSideNavigation());
+    this.currentMediaQuery = screenWidthXl;
+    this.dispatchMediaQuery();
   }
 
   private initializeState(): void {
     // Initialize the store with a MediaQueryStateInterface
     // reflecting the size of current user's screen.
-    if (window.innerWidth < 600) {
+    // Since the media events will not have fired on initialization,
+    // we set the starting state using the window object.
+    if (window.screen && window.innerWidth < 600) {
       this.notifyStoreScreenWidthXs();
-    } else if (window.innerWidth < 960 && window.innerWidth >= 600) {
+    } else if (window.screen && window.innerWidth < 960 && window.innerWidth >= 600) {
       this.notifyStoreScreenWidthSm();
-    } else if (window.innerWidth < 1280 && window.innerWidth >= 960) {
+    } else if (window.screen && window.innerWidth < 1280 && window.innerWidth >= 960) {
       this.notifyStoreScreenWidthMd();
-      // For smaller screen sizes the sidenav will render over
-      // the sidenav-content with a backdrop and we do not want
-      // that on initialization. However, for screens larger than
-      // sm, the sidenav will render to the side the sidenav-content
-      // and this is the desired behavior upon application
-      // initialization.
-      this.requestSidenavOpened();
-    } else if (window.innerWidth < 1920 && window.innerWidth >= 960) {
+    } else if (window.screen && window.innerWidth < 1920 && window.innerWidth >= 960) {
       this.notifyStoreScreenWidthLg();
-      // See above.
-      this.requestSidenavOpened();
-    } else if (window.innerWidth < 5001 && window.innerWidth >= 1920) {
-      this.notifyStoreScreenWidthXl();
-      // See above.
-      this.requestSidenavOpened();
-    } else {
-      console.log(new Error('Detected an oversized screen, falling back to XL.'));
+    } else if (window.screen) {
       this.notifyStoreScreenWidthXl();
     }
   }

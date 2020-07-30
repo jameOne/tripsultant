@@ -18,7 +18,7 @@ import {
   latLng,
   LatLng,
   LatLngBounds,
-  Layer, MapOptions, Marker,
+  Layer, MapOptions, Marker, Map,
   marker,
   polyline,
   tileLayer,
@@ -56,6 +56,7 @@ import {
   toggleGPSFixedBoolean
 } from '~store/actions/navigator-geolocation/navigator-geolocation.actions';
 import { NavigatorGeolocationInterface } from '~models/navigation-geolocation/navigation-geolocation.interface';
+import { selectSideNavigation } from '~store/selectors/side-navigation/side-navigation.selectors';
 
 @Component({
   selector: 'tripsultant-apps-map-map-view',
@@ -101,6 +102,12 @@ export class MapViewComponent implements OnInit {
   geolocationMarker: Marker;
   geolocationCircle: Circle;
 
+  currentMap: Map;
+
+  sidenavOpen$: Observable<boolean>;
+  sidenavOpen: boolean;
+
+
   constructor(
     private store: Store<AppStateInterface>,
     private changeDetectorRef: ChangeDetectorRef
@@ -122,6 +129,7 @@ export class MapViewComponent implements OnInit {
     this.layerControlOptions = {
       position: 'topleft'
     };
+    this.sidenavOpen$ = store.pipe(select(selectSideNavigation));
   }
 
   ngOnInit() {
@@ -267,7 +275,14 @@ export class MapViewComponent implements OnInit {
     this.mapOptions = {
       zoomControl: false
     };
+
+    // When the user toggles the sidenav we want to trigger size invalidation.
+    this.sidenavOpen$.pipe(distinctUntilChanged()).subscribe(sidenavOpen => {
+      this.sidenavOpen = sidenavOpen;
+      this.smoothResize();
+    });
   }
+
 
   toggleGPSFixed(): void {
     console.log('TOGGLE');
@@ -319,6 +334,21 @@ export class MapViewComponent implements OnInit {
   mapZoomOut(): void {
     if (this.currentZoomLevel > this.currentTileLayerOptions.minZoom) {
       this.currentZoomLevel--;
+    }
+  }
+
+  mapReady(leafletMap: Map): void {
+    this.currentMap = leafletMap;
+  }
+
+  /**
+   * Smooth resize of map
+   */
+  private smoothResize() {
+    for (let i = 0; i < 30; i++) {
+      setTimeout(() => {
+        this.currentMap.invalidateSize();
+      }, 10 * i);
     }
   }
 }

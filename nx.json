@@ -31,6 +31,9 @@
     },
     "google-maps-proxy": {
       "tags": []
+    },
+    "ngrx-analytics": {
+      "tags": []
     }
   }
 }

@@ -176,6 +176,38 @@
           }
         }
       }
+    },
+    "ngrx-analytics": {
+      "projectType": "library",
+      "root": "libs/ngrx-analytics",
+      "sourceRoot": "libs/ngrx-analytics/src",
+      "prefix": "tripsultant",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngrx-analytics/tsconfig.lib.json",
+              "libs/ngrx-analytics/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ngrx-analytics/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ngrx-analytics/jest.config.js",
+            "tsConfig": "libs/ngrx-analytics/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ngrx-analytics/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

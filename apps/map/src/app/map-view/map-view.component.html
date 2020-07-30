@@ -8,6 +8,7 @@
      (leafletZoomChange)="mapZoom($event)"
      [leafletFitBounds]="tripBounds"
      [leafletOptions]="mapOptions"
+     (leafletMapReady)="mapReady($event)"
      (leafletCenterChange)="mapRecenter($event)">
   <div id="sidenav-toggle-button-container">
     <div id="sidenav-toggle-button" aria-label="Toggle side navigation panel.">
