@@ -16,7 +16,7 @@
           </p>
         </div>
         <div id="add-trip-button-container">
-          <tripsultant-apps-map-add-trip-button [displayType]=" screenWidthGtXs
+          <tripsultant-apps-map-add-trip-button [displayType]="selectedMediaQuery.query.gt_xs
             ? 'mat-raised-button' : 'mat-mini-fab-button' "></tripsultant-apps-map-add-trip-button>
         </div>
       </mat-card-content>

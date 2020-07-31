@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppStateInterface } from '~store/states/app/app.state';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { selectScreenWidthIsLtMd } from '~store/selectors/media-query/media-query.selectors';
 import { MatDateRangePicker } from '@angular/material/datepicker';
 import { setSelectedTripEndDate, setSelectedTripStartDate } from '~store/actions/side-navigation-content/trip.actions';
+import { getSelectedMediaQuery, MediaQueriesEntity } from '@tripsultant/ngrx-analytics';
 
 @Component({
   selector: 'tripsultant-apps-map-trip-date-range-picker',
@@ -14,22 +14,24 @@ import { setSelectedTripEndDate, setSelectedTripStartDate } from '~store/actions
 })
 export class TripDateRangePickerComponent implements OnInit {
   rangeFormGroup: FormGroup;
-  screenWidthLtMd$: Observable<boolean>;
-  screenWidthLtMd: boolean;
+
+  selectedMediaQuery$: Observable<MediaQueriesEntity>;
+  selectedMediaQuery: MediaQueriesEntity;
 
   @ViewChild('picker') matDateRangePicker: MatDateRangePicker<Date>;
 
   constructor(
     private formBuilder: FormBuilder,
-    private store: Store<AppStateInterface>
+    private store: Store<Object>
   ) {
-    this.screenWidthLtMd$ = store.pipe(select(selectScreenWidthIsLtMd));
+    this.selectedMediaQuery$ = store.pipe(select(getSelectedMediaQuery));
   }
 
   ngOnInit(): void {
-    this.screenWidthLtMd$.pipe().subscribe(screenWidthLtMd => {
-      this.screenWidthLtMd = screenWidthLtMd;
+    this.selectedMediaQuery$.pipe().subscribe(selectedMediaQuery => {
+      this.selectedMediaQuery = selectedMediaQuery;
     });
+
     this.rangeFormGroup = this.formBuilder.group({
       start: [null, [Validators.required]],
       end: [null, [Validators.required]]

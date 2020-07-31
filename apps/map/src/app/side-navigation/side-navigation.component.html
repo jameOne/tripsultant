@@ -1,7 +1,7 @@
 <mat-sidenav-container id="sidenav-container">
   <mat-sidenav id="sidenav"
                [fixedInViewport]="true"
-               [mode]="screenWidthIsLtMd ? 'over' : 'side'"
+               [mode]="selectedMediaQuery?.query.lt_md ? 'over' : 'side'"
                [opened]="sideNavigation" disableClose>
     <tripsultant-apps-map-side-navigation-search-bar></tripsultant-apps-map-side-navigation-search-bar>
     <div id="slide-counter" [@slideCounter]="panelSelectionState">

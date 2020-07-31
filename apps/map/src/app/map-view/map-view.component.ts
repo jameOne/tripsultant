@@ -133,38 +133,38 @@ export class MapViewComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.gpsFixed$.subscribe((gpsFixed) => {
-      this.geolocation$.subscribe((geolocation) => {
-        this.gpsFixed = gpsFixed;
-        if (this.gpsFixed) {
-          if (this.layers && geolocation) {
-            this.geolocationMarker = marker([
-                geolocation.coords.latitude,
-                geolocation.coords.longitude
-              ],
-              {
-                icon: icon({
-                  iconSize: [25, 41],
-                  iconAnchor: [13, 41],
-                  iconUrl: '../../assets/marker-icon.png'
-                })
-              });
-            this.layers.push(this.geolocationMarker);
-            this.geolocationCircle = circle([
-              geolocation.coords.latitude,
-              geolocation.coords.longitude
-            ], {
-              radius: 1000
-            });
-            this.layers.push(this.geolocationCircle);
-          }
-        } else {
-          this.layers = this.layers
-            .filter(layer => (layer !== this.geolocationCircle))
-            .filter(layer => (layer !== this.geolocationMarker));
-        }
-      });
-    });
+    // this.gpsFixed$.subscribe((gpsFixed) => {
+    //   this.geolocation$.subscribe((geolocation) => {
+    //     this.gpsFixed = gpsFixed;
+    //     if (this.gpsFixed) {
+    //       if (this.layers && geolocation) {
+    //         this.geolocationMarker = marker([
+    //             geolocation.coords.latitude,
+    //             geolocation.coords.longitude
+    //           ],
+    //           {
+    //             icon: icon({
+    //               iconSize: [25, 41],
+    //               iconAnchor: [13, 41],
+    //               iconUrl: '../../assets/marker-icon.png'
+    //             })
+    //           });
+    //         this.layers.push(this.geolocationMarker);
+    //         this.geolocationCircle = circle([
+    //           geolocation.coords.latitude,
+    //           geolocation.coords.longitude
+    //         ], {
+    //           radius: 1000
+    //         });
+    //         this.layers.push(this.geolocationCircle);
+    //       }
+    //     } else {
+    //       this.layers = this.layers
+    //         .filter(layer => (layer !== this.geolocationCircle))
+    //         .filter(layer => (layer !== this.geolocationMarker));
+    //     }
+    //   });
+    // });
 
     combineLatest([
       this.tripWayPoints$.pipe(

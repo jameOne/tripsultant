@@ -63,10 +63,10 @@ import {
 import { GoogleMapsDirectionsService } from '~services/google-services/google-maps-directions.service';
 import { environment } from '~environments/environment';
 import { latLng } from 'leaflet';
-import {
-  appendDefaultGPSFixedBoolean,
-  removeGPSFixedBoolean
-} from '~store/actions/navigator-geolocation/navigator-geolocation.actions';
+// import {
+//   appendDefaultGPSFixedBoolean,
+//   removeGPSFixedBoolean
+// } from '~store/actions/navigator-geolocation/navigator-geolocation.actions';
 
 @Injectable()
 export class TripEffects {
@@ -134,7 +134,7 @@ export class TripEffects {
             this.store.dispatch(addDirectionsResponsesGroup());
             this.store.dispatch(addInitialSelectedTripWaypointIndex());
 
-            this.store.dispatch(appendDefaultGPSFixedBoolean());
+            // this.store.dispatch(appendDefaultGPSFixedBoolean());
 
             // Finally, increment the trip index to the newly selected trip.
             this.store.dispatch(setSelectedTripIndex({ index: tripList.length - 1 }));
@@ -178,7 +178,7 @@ export class TripEffects {
             this.store.dispatch(removeRouteFormGroup(selectedTripIndexObject));
             this.store.dispatch(removeSelectedTripWaypointIndex(selectedTripIndexObject));
             this.store.dispatch(removeFitToBoundsBoolean(selectedTripIndexObject));
-            this.store.dispatch(removeGPSFixedBoolean(selectedTripIndexObject));
+            // this.store.dispatch(removeGPSFixedBoolean(selectedTripIndexObject));
             this.store.dispatch(setLastTripRemovalAcknowledgedFlagFalse());
 
             // Finally, decrement the selected trip index depending on which

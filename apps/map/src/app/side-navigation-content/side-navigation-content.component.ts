@@ -13,12 +13,12 @@ import {
   setLastTripRemovalAcknowledgedFlagTrue,
   setSelectedTripIndex
 } from '~store/actions/side-navigation-content/trip.actions';
-import { LatLng, LatLngExpression } from 'leaflet';
+import { LatLng } from 'leaflet';
 import { updateCenterHistory, updateZoomHistory } from '~store/actions/map-view/map-view.actions';
 import { selectTripNameDialogIsOpen } from '~store/selectors/add-trip-dialog/add-trip-dialog.selectors';
 import { MatRipple } from '@angular/material/core';
 import { swingInAndOut } from '../app.animations.triggers';
-import { selectScreenWidthIsGtXs } from '~store/selectors/media-query/media-query.selectors';
+import { getSelectedMediaQuery, MediaQueriesEntity } from '@tripsultant/ngrx-analytics';
 
 @Component({
   selector: 'tripsultant-apps-map-side-navigation-content',
@@ -40,16 +40,17 @@ export class SideNavigationContentComponent implements OnInit {
   selectedTripIndex: number;
   mapIndex: number[];
   interactionHistories: { zoomHistory: number[], centerHistory: LatLng[] }[];
-  screenWidthGtXs$: Observable<boolean>;
-  screenWidthGtXs: boolean;
   @ViewChild(MatRipple) matRipple: MatRipple;
 
+  selectedMediaQuery$: Observable<MediaQueriesEntity>;
+  selectedMediaQuery: MediaQueriesEntity;
+
   constructor(
-    private store: Store<AppStateInterface>,
+    private store: Store<Object>,
     private changeDetectorRef: ChangeDetectorRef
   ) {
     this.trips$ = store.pipe(select(selectTripList));
-    this.screenWidthGtXs$ = store.pipe(select(selectScreenWidthIsGtXs));
+    this.selectedMediaQuery$ = store.pipe(select(getSelectedMediaQuery));
     this.selectedTripIndex$ = store.pipe(select(selectSelectedTripIndex));
     this.tripNameDialogOpen$ = store.pipe(select(selectTripNameDialogIsOpen));
     this.tripRemovalRequests$ = store.pipe(select(selectTripRemovalRequests));
@@ -58,11 +59,9 @@ export class SideNavigationContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.screenWidthGtXs$
-      .pipe(distinctUntilChanged())
-      .subscribe(screenWidthGtXs => {
-        this.screenWidthGtXs = screenWidthGtXs;
-      });
+    this.selectedMediaQuery$.pipe().subscribe(selectedMediaQuery => {
+      this.selectedMediaQuery = selectedMediaQuery;
+    });
 
     combineLatest([
       this.tripRemovalRequests$,

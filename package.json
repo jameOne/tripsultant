@@ -83,6 +83,8 @@
     "ts-jest": "25.2.1",
     "ts-node": "~7.0.0",
     "tslint": "~6.0.0",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "@ngrx/schematics": "9.1.0",
+    "@ngrx/store-devtools": "9.1.0"
   }
 }

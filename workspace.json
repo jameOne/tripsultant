@@ -208,6 +208,70 @@
           "style": "scss"
         }
       }
+    },
+    "ngrx-atlas": {
+      "projectType": "library",
+      "root": "libs/ngrx-atlas",
+      "sourceRoot": "libs/ngrx-atlas/src",
+      "prefix": "tripsultant",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ngrx-atlas/tsconfig.lib.json",
+              "libs/ngrx-atlas/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/ngrx-atlas/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/ngrx-atlas/jest.config.js",
+            "tsConfig": "libs/ngrx-atlas/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/ngrx-atlas/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "map-utils": {
+      "projectType": "library",
+      "root": "libs/map-utils",
+      "sourceRoot": "libs/map-utils/src",
+      "prefix": "tripsultant",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/map-utils/tsconfig.lib.json",
+              "libs/map-utils/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/map-utils/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/map-utils/jest.config.js",
+            "tsConfig": "libs/map-utils/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/map-utils/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

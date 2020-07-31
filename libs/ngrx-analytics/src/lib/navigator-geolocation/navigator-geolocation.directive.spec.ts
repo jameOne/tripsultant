@@ -1,10 +1,10 @@
 import { NavigatorGeolocationDirective } from './navigator-geolocation.directive';
 import {
-  initialNavigatorGeolocationState, navigatorGeolocationAdapter
-} from './navigator-geolocation.reducer';
+  initialNavigatorGeolocationState,
+} from '@tripsultant/ngrx-analytics';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { async, TestBed } from '@angular/core/testing';
-import { NavigatorGeolocationsActionsEnum, nullPosition } from '@tripsultant/ngrx-analytics';
+import { NavigatorGeolocationsActionsEnum } from '@tripsultant/ngrx-analytics';
 
 describe('NavigatorGeolocationDirective', () => {
   const initialState = initialNavigatorGeolocationState;
@@ -36,7 +36,7 @@ describe('NavigatorGeolocationDirective', () => {
     directive.ngOnInit();
     expect(directive.navigatorGeolocation.watchPosition).toHaveBeenCalledTimes(1);
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(NavigatorGeolocationsActionsEnum.AddNavigatorGeolocation);
+      expect(action.type).toEqual(NavigatorGeolocationsActionsEnum.LoadNavigatorGeolocations);
     });
   }));
 
@@ -47,14 +47,25 @@ describe('NavigatorGeolocationDirective', () => {
         clearWatch: jest.fn(),
         getCurrentPosition: jest.fn(),
         watchPosition: jest.fn().mockImplementation((success) => Promise.resolve(success(
-          nullPosition
+          {
+            coords: {
+              accuracy: null,
+              altitude: null,
+              altitudeAccuracy: null,
+              heading: null,
+              latitude: null,
+              longitude: null,
+              speed: null
+            },
+            timestamp: 0
+          }
         ))),
       },
     });
     directive.ngOnInit();
     expect(directive.navigatorGeolocation.watchPosition).toHaveBeenCalledTimes(1);
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(NavigatorGeolocationsActionsEnum.UpdateNavigatorGeolocation);
+      expect(action.type).toEqual(NavigatorGeolocationsActionsEnum.AddNavigatorGeolocation);
     });
   }));
 

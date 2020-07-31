@@ -77,7 +77,7 @@ import { SideNavigationToggleComponent } from './side-navigation-toggle/side-nav
 import { TripDateRangePickerComponent } from './trip-date-range-picker/trip-date-range-picker.component';
 import { TripDetailComponent } from './trip-detail/trip-detail.component';
 import { TransitDirectionsInformationComponent } from './transit-directions-information/transit-directions-information.component';
-import { NgrxAnalyticsModule } from '../../../../libs/ngrx-analytics/src';
+import { NgrxAnalyticsModule } from '@tripsultant/ngrx-analytics';
 
 
 @NgModule({

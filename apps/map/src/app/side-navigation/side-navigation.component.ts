@@ -17,7 +17,8 @@ import {
 import { slideCounter } from '../app.animations.triggers';
 import { WaypointInterface } from '~models/side-navigation-content/waypoint.interface';
 import { distinctUntilChanged } from 'rxjs/operators';
-import { selectScreenWidthIsLtMd } from '~store/selectors/media-query/media-query.selectors';
+import { Dictionary } from '@ngrx/entity';
+import { getMediaQueriesEntities, getSelectedMediaQuery, MediaQueriesEntity } from '@tripsultant/ngrx-analytics';
 
 @Component({
   selector: 'tripsultant-apps-map-side-navigation',
@@ -37,26 +38,25 @@ export class SideNavigationComponent implements OnInit {
   waypoints$: Observable<WaypointInterface[][]>;
   currentWaypoints: WaypointInterface[];
   selectedTripIndex$: Observable<number>;
-  screenWidthIsLtMd$: Observable<boolean>;
-  screenWidthIsLtMd: boolean;
+
+  selectedMediaQuery$: Observable<MediaQueriesEntity>;
+  selectedMediaQuery: MediaQueriesEntity;
 
   constructor(
-    private store: Store<AppStateInterface>
+    private store: Store<Object>
   ) {
     this.trips$ = store.pipe(select(selectTripList));
     this.sideNavigation$ = store.pipe(select(selectSideNavigation));
     this.panelSelectionState$ = store.pipe(select(selectPanelSelection));
     this.selectedTripIndex$ = store.pipe(select(selectSelectedTripIndex));
     this.waypoints$ = store.pipe(select(selectTripWaypoints));
-    this.screenWidthIsLtMd$ = store.pipe(select(selectScreenWidthIsLtMd));
+    this.selectedMediaQuery$ = store.pipe(select(getSelectedMediaQuery));
   }
 
   ngOnInit(): void {
-    this.screenWidthIsLtMd$
-      .pipe(distinctUntilChanged())
-      .subscribe(screenWidthIsLtMd => {
-        this.screenWidthIsLtMd = screenWidthIsLtMd;
-      });
+    this.selectedMediaQuery$.pipe().subscribe(selectedMediaQuery => {
+      this.selectedMediaQuery = selectedMediaQuery;
+    });
 
     this.sideNavigation$.pipe(distinctUntilChanged()).subscribe(sideNavigation => {
       this.sideNavigation = sideNavigation;

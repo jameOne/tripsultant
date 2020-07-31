@@ -45,8 +45,6 @@ export class MediaQueriesDirective implements OnInit, OnDestroy {
   upperXlQuery: MediaQueryList;
   private readonly xlQueryListener: () => void;
 
-  @Input() private reAnalyticsMediaQueriesId = 'default';
-
   constructor(
     private store: Store<Object>,
   ) {
@@ -76,13 +74,6 @@ export class MediaQueriesDirective implements OnInit, OnDestroy {
 
 
   ngOnInit(): void {
-    this.store.dispatch(addMediaQuery({
-      mediaQuery: {
-        id: this.reAnalyticsMediaQueriesId,
-        query: nullMediaQuery
-      }
-    }));
-
     if (typeof window.matchMedia('(min-width: 0px)').addEventListener !== 'undefined') {
       // screen
       this.screenQuery.addEventListener('change', this.screenQueryListener);
@@ -170,12 +161,10 @@ export class MediaQueriesDirective implements OnInit, OnDestroy {
   }
 
   private dispatchMediaQuery(): void {
-    this.store.dispatch(updateMediaQuery({
-      update: {
-        id: this.reAnalyticsMediaQueriesId,
-        changes: {
-          query: this.currentMediaQuery
-        }
+    this.store.dispatch(addMediaQuery({
+      mediaQuery: {
+        id: new Date().getTime().toString(),
+        query: this.currentMediaQuery,
       }
     }));
   }

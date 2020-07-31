@@ -132,7 +132,7 @@ describe('MediaQueriesDirective (window.*EventListener is defined)', () => {
     });
     directive.screenXsConditional()();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthXs)
     });
   }));
@@ -165,7 +165,7 @@ describe('MediaQueriesDirective (window.*EventListener is defined)', () => {
     });
     directive.screenSmConditional()();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthSm)
     });
   }));
@@ -198,7 +198,7 @@ describe('MediaQueriesDirective (window.*EventListener is defined)', () => {
     });
     directive.screenMdConditional()();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthMd)
     });
   }));
@@ -231,7 +231,7 @@ describe('MediaQueriesDirective (window.*EventListener is defined)', () => {
     });
     directive.screenLgConditional()();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthLg)
     });
   }));
@@ -264,7 +264,7 @@ describe('MediaQueriesDirective (window.*EventListener is defined)', () => {
     });
     directive.screenXlConditional()();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthXl)
     });
   }));
@@ -277,7 +277,7 @@ describe('MediaQueriesDirective (window.*EventListener is defined)', () => {
     });
     directive.ngOnInit();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthXs);
     });
   }));
@@ -289,7 +289,7 @@ describe('MediaQueriesDirective (window.*EventListener is defined)', () => {
     });
     directive.ngOnInit();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthSm)
     });
   }));
@@ -301,7 +301,7 @@ describe('MediaQueriesDirective (window.*EventListener is defined)', () => {
     });
     directive.ngOnInit();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthMd)
     });
   }));
@@ -313,7 +313,7 @@ describe('MediaQueriesDirective (window.*EventListener is defined)', () => {
     });
     directive.ngOnInit();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthLg)
     });
   }));
@@ -325,7 +325,7 @@ describe('MediaQueriesDirective (window.*EventListener is defined)', () => {
     });
     directive.ngOnInit();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthXl)
     });
   }));
@@ -451,7 +451,7 @@ describe('MediaQueriesDirective (window.*EventListener is undefined)', () => {
     });
     directive.screenXsConditional()();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthXs)
     });
   }));
@@ -484,7 +484,7 @@ describe('MediaQueriesDirective (window.*EventListener is undefined)', () => {
     });
     directive.screenSmConditional()();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthSm)
     });
   }));
@@ -517,7 +517,7 @@ describe('MediaQueriesDirective (window.*EventListener is undefined)', () => {
     });
     directive.screenMdConditional()();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthMd)
     });
   }));
@@ -550,7 +550,7 @@ describe('MediaQueriesDirective (window.*EventListener is undefined)', () => {
     });
     directive.screenLgConditional()();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthLg)
     });
   }));
@@ -583,7 +583,7 @@ describe('MediaQueriesDirective (window.*EventListener is undefined)', () => {
     });
     directive.screenXlConditional()();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthXl)
     });
   }));
@@ -596,7 +596,7 @@ describe('MediaQueriesDirective (window.*EventListener is undefined)', () => {
     });
     directive.ngOnInit();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthXs);
     });
   }));
@@ -608,7 +608,7 @@ describe('MediaQueriesDirective (window.*EventListener is undefined)', () => {
     });
     directive.ngOnInit();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthSm)
     });
   }));
@@ -620,7 +620,7 @@ describe('MediaQueriesDirective (window.*EventListener is undefined)', () => {
     });
     directive.ngOnInit();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthMd)
     });
   }));
@@ -632,7 +632,7 @@ describe('MediaQueriesDirective (window.*EventListener is undefined)', () => {
     });
     directive.ngOnInit();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthLg)
     });
   }));
@@ -644,7 +644,7 @@ describe('MediaQueriesDirective (window.*EventListener is undefined)', () => {
     });
     directive.ngOnInit();
     mockStore.scannedActions$.subscribe((action) => {
-      expect(action.type).toEqual(MediaQueriesActionsEnum.UpdateMediaQuery);
+      expect(action.type).toEqual(MediaQueriesActionsEnum.AddMediaQuery);
       expect(directive.currentMediaQuery).toEqual(screenWidthXl)
     });
   }));

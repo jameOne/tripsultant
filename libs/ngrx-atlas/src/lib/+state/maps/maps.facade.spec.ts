@@ -7,31 +7,25 @@ import { StoreModule, Store } from '@ngrx/store';
 
 import { NxModule } from '@nrwl/angular';
 
-import { MediaQueriesEntity, nullMediaQuery } from './media-queries.models';
-import { MediaQueriesEffects } from './media-queries.effects';
-import { MediaQueriesFacade } from './media-queries.facade';
+import { MapsEntity } from './maps.models';
+import { MapsEffects } from './maps.effects';
+import { MapsFacade } from './maps.facade';
 
-import * as MediaQueriesSelectors from './media-queries.selectors';
-import * as MediaQueriesActions from './media-queries.actions';
-import {
-  MEDIAQUERIES_FEATURE_KEY,
-  MediaQueriesState,
-  initialMediaQueriesState,
-  MEDIAQUERIES_REDUCER,
-} from './media-queries.reducer';
+import * as MapsActions from './maps.actions';
+import { MAPS_FEATURE_KEY, MapsState, MAPS_REDUCER } from './maps.reducer';
 
 interface TestSchema {
-  mediaQueries: MediaQueriesState;
+  maps: MapsState;
 }
 
-describe('MediaQueriesFacade', () => {
-  let facade: MediaQueriesFacade;
+describe('MapsFacade', () => {
+  let facade: MapsFacade;
   let store: Store<TestSchema>;
-  const createMediaQueriesEntity = (id: string, query = nullMediaQuery) =>
+  const createMapsEntity = (id: string, name = '') =>
     ({
       id,
-      query,
-    } as MediaQueriesEntity);
+      name: name || `name-${id}`,
+    } as MapsEntity);
 
   beforeEach(() => {});
 
@@ -39,10 +33,10 @@ describe('MediaQueriesFacade', () => {
     beforeEach(() => {
       @NgModule({
         imports: [
-          StoreModule.forFeature(MEDIAQUERIES_FEATURE_KEY, MEDIAQUERIES_REDUCER),
-          EffectsModule.forFeature([MediaQueriesEffects]),
+          StoreModule.forFeature(MAPS_FEATURE_KEY, MAPS_REDUCER),
+          EffectsModule.forFeature([MapsEffects]),
         ],
-        providers: [MediaQueriesFacade],
+        providers: [MapsFacade],
       })
       class CustomFeatureModule {}
 
@@ -58,23 +52,23 @@ describe('MediaQueriesFacade', () => {
       TestBed.configureTestingModule({ imports: [RootModule] });
 
       store = TestBed.inject(Store);
-      facade = TestBed.inject(MediaQueriesFacade);
+      facade = TestBed.inject(MapsFacade);
     });
 
     /**
      * The initially generated facade::loadAll() returns empty array
      */
-    it('loadAll() should return a list with a single element and with with loaded == true', async (done) => {
+    it('loadAll() should return empty list with loaded == true', async (done) => {
       try {
-        let list = await readFirst(facade.allMediaQueries$);
+        let list = await readFirst(facade.allMaps$);
         let isLoaded = await readFirst(facade.loaded$);
 
         expect(list.length).toBe(0);
         expect(isLoaded).toBe(false);
 
-        facade.dispatch(MediaQueriesActions.loadMediaQueries());
+        facade.dispatch(MapsActions.loadMaps());
 
-        list = await readFirst(facade.allMediaQueries$);
+        list = await readFirst(facade.allMaps$);
         isLoaded = await readFirst(facade.loaded$);
 
         expect(list.length).toBe(0);
@@ -87,26 +81,23 @@ describe('MediaQueriesFacade', () => {
     });
 
     /**
-     * Use `loadMediaQueriesSuccess` to manually update list
+     * Use `loadMapsSuccess` to manually update list
      */
-    it('allMediaQueries$ should return the loaded list; and loaded flag == true', async (done) => {
+    it('allMaps$ should return the loaded list; and loaded flag == true', async (done) => {
       try {
-        let list = await readFirst(facade.allMediaQueries$);
+        let list = await readFirst(facade.allMaps$);
         let isLoaded = await readFirst(facade.loaded$);
 
         expect(list.length).toBe(0);
         expect(isLoaded).toBe(false);
 
         facade.dispatch(
-          MediaQueriesActions.loadMediaQueriesSuccess({
-            mediaQueries: [
-              createMediaQueriesEntity('Test-0'),
-              createMediaQueriesEntity('Test-1'),
-            ],
+          MapsActions.loadMapsSuccess({
+            maps: [createMapsEntity('AAA'), createMapsEntity('BBB')],
           })
         );
 
-        list = await readFirst(facade.allMediaQueries$);
+        list = await readFirst(facade.allMaps$);
         isLoaded = await readFirst(facade.loaded$);
 
         expect(list.length).toBe(2);

@@ -16,7 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@tripsultant/ngrx-analytics": ["libs/ngrx-analytics/src/index.ts"]
+      "@tripsultant/ngrx-analytics": ["libs/ngrx-analytics/src/index.ts"],
+      "@tripsultant/ngrx-atlas": ["libs/ngrx-atlas/src/index.ts"],
+      "@tripsultant/map-utils": ["libs/map-utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

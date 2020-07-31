@@ -1574,6 +1574,11 @@
   dependencies:
     tslib "^2.0.0"
 
+"@ngrx/schematics@9.1.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/schematics/-/schematics-9.1.0.tgz#05428023a4e0a9b35521c85d0ec80c905bb34963"
+  integrity sha512-CYfBFP/jCNFFQkV+Afc4kPCRf3Ye2NlNIEwU5urtZMt8WV8RWFbzsbL0O9UMH6zshPvwoZoBqU/5ZftZupxcHA==
+
 "@ngrx/store-devtools@^10.0.0-beta.0":
   version "10.0.0-beta.1"
   resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-10.0.0-beta.1.tgz#0510aab73a470a45b75a6534facba9dfe5a2ddbf"

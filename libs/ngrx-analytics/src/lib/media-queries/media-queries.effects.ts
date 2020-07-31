@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { fetch } from '@nrwl/angular';
 
-import * as fromMediaQueries from './media-queries.reducer';
 import * as MediaQueriesActions from './media-queries.actions';
 import { MediaQueriesEntity } from './media-queries.models';
 

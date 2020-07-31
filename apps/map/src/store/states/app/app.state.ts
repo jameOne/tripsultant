@@ -28,14 +28,6 @@ import {
   DirectionsStateInterface,
   initialDirectionsState
 } from '../directions/directions.state';
-import {
-  initialMediaQueryState,
-  MediaQueryStateInterface
-} from '../../states/media-query/media-query.state';
-import {
-  initialNavigatorGeolocationState,
-  NavigatorGeolocationStateInterface
-} from '../../states/navigator-geolocation/navigator-geolocation.state';
 
 
 export interface AppStateInterface {
@@ -46,8 +38,6 @@ export interface AppStateInterface {
   waypoints: WaypointsStateInterface;
   waypointLocationDialog: WaypointLocationDialogStateInterface;
   directions: DirectionsStateInterface;
-  mediaQuery: MediaQueryStateInterface;
-  navigatorGeolocation: NavigatorGeolocationStateInterface;
   router?: RouterReducerState;
 }
 
@@ -59,8 +49,6 @@ export const initialAppState: AppStateInterface = {
   waypoints: initialWaypointState,
   waypointLocationDialog: initialWaypointLocationDialogState,
   directions: initialDirectionsState,
-  mediaQuery: initialMediaQueryState,
-  navigatorGeolocation: initialNavigatorGeolocationState
 };
 
 export function getInitialState(): AppStateInterface {
