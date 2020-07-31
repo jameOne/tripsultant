@@ -1,7 +1,7 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import {
   ATLASES_FEATURE_KEY,
-  State,
+  IAtlasesState,
   AtlasesPartialState,
   atlasesAdapter,
 } from './atlases.reducer';
@@ -9,33 +9,33 @@ import {
 // Lookup the 'Atlases' feature state managed by NgRx
 export const getAtlasesState = createFeatureSelector<
   AtlasesPartialState,
-  State
+  IAtlasesState
 >(ATLASES_FEATURE_KEY);
 
 const { selectAll, selectEntities } = atlasesAdapter.getSelectors();
 
 export const getAtlasesLoaded = createSelector(
   getAtlasesState,
-  (state: State) => state.loaded
+  (state: IAtlasesState) => state.loaded
 );
 
 export const getAtlasesError = createSelector(
   getAtlasesState,
-  (state: State) => state.error
+  (state: IAtlasesState) => state.error
 );
 
-export const getAllAtlases = createSelector(getAtlasesState, (state: State) =>
+export const getAllAtlases = createSelector(getAtlasesState, (state: IAtlasesState) =>
   selectAll(state)
 );
 
 export const getAtlasesEntities = createSelector(
   getAtlasesState,
-  (state: State) => selectEntities(state)
+  (state: IAtlasesState) => selectEntities(state)
 );
 
 export const getSelectedAtlasId = createSelector(
   getAtlasesState,
-  (state: State) => state.selectedId
+  (state: IAtlasesState) => state.selectedId
 );
 
 export const getSelectedAtlas = createSelector(

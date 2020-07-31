@@ -2,6 +2,7 @@ import { IAtlasesEntity } from './atlases.models';
 import * as AtlasesActions from './atlases.actions';
 import { IAtlasesState, initialAtlasesState, ATLASES_REDUCER } from './atlases.reducer';
 import { Action } from '@ngrx/store';
+import { async } from '@angular/core/testing';
 
 describe('Atlases Reducer', () => {
   // load initial queries
@@ -14,18 +15,19 @@ describe('Atlases Reducer', () => {
       name: name || `name-${id}`,
     } as IAtlasesEntity);
 
-  beforeEach(() => {});
+  beforeEach(async(() => {
+    const atlases = [
+      createAtlasesEntity('Test-0'),
+      createAtlasesEntity('Test-1'),
+    ];
+    // load initial entities
+    action = AtlasesActions.loadAtlasesSuccess({ atlases });
+
+    result = ATLASES_REDUCER(initialAtlasesState, action);
+  }));
 
   describe('valid Atlases actions', () => {
     it('loadAtlasesSuccess should return set the list of known Atlases', () => {
-      const atlases = [
-        createAtlasesEntity('ATLAS-AAA'),
-        createAtlasesEntity('ATLAS-zzz'),
-      ];
-      action = AtlasesActions.loadAtlasesSuccess({ atlases });
-
-      result = ATLASES_REDUCER(initialAtlasesState, action);
-
       expect(result.loaded).toBe(true);
       expect(result.ids.length).toBe(2);
     });
@@ -41,6 +43,17 @@ describe('Atlases Reducer', () => {
     });
   });
 
+  describe('error loading atlases', () => {
+    it('should return stat with error', () => {
+      const loadError = new Error('error loading atlases')
+      action = AtlasesActions.loadAtlasesFailure({
+        error: loadError,
+      });
+      result = ATLASES_REDUCER(initialAtlasesState, action);
+
+      expect(result.error).toBe(loadError);
+    });
+  });
 
   describe('selectAtlas()', () => {
     it('should select ids ', () => {
@@ -112,7 +125,7 @@ describe('Atlases Reducer', () => {
   });
 
   describe('addAtlases()', () => {
-    it('should add many maps', () => {
+    it('should add many atlases', () => {
       action = AtlasesActions.addAtlases({
         atlases: [
           {
@@ -133,7 +146,7 @@ describe('Atlases Reducer', () => {
   });
 
   describe('upsertAtlases()', () => {
-    it('should upsert many maps', () => {
+    it('should upsert many atlases', () => {
       action = AtlasesActions.upsertAtlases({
         atlases: [
           {
@@ -184,7 +197,7 @@ describe('Atlases Reducer', () => {
   });
 
   describe('updateAtlases()', () => {
-    it('should update many maps', () => {
+    it('should update many atlases', () => {
       action = AtlasesActions.updateAtlases({
         updates: [
           {
@@ -209,7 +222,7 @@ describe('Atlases Reducer', () => {
   });
 
   describe('mapAtlases()', () => {
-    it('should map many maps', () => {
+    it('should map many atlases', () => {
       action = AtlasesActions.mapAtlases({
         entityMap: (entity) => ({ ...entity, id: 'Test-' + entity.id.toString() })
       });
@@ -245,7 +258,7 @@ describe('Atlases Reducer', () => {
   });
 
   describe('deleteAtlases()', () => {
-    it('should delete many maps', () => {
+    it('should delete many atlases', () => {
       action = AtlasesActions.deleteAtlases({
         ids: ['Test-0', 'Test-100'],
       });
@@ -257,7 +270,7 @@ describe('Atlases Reducer', () => {
   });
 
   describe('deleteAtlasesByPredicate()', () => {
-    it('should delete many maps by given predicate', () => {
+    it('should delete many atlases by given predicate', () => {
       action = AtlasesActions.deleteAtlasesByPredicate({
         predicate: entity => entity.id === 'Test-0',
       });
@@ -269,7 +282,7 @@ describe('Atlases Reducer', () => {
   });
 
   describe('clearAtlases()', () => {
-    it('should clear many maps', () => {
+    it('should clear many atlases', () => {
       action = AtlasesActions.clearAtlases();
       result = ATLASES_REDUCER(result, action);
       expect(result.ids.length).toBe(0);
