@@ -1,15 +1,15 @@
-import { MapsEntity } from './maps.models';
+import { IMapsEntity } from './maps.models';
 import { MapsState, mapsAdapter, initialMapsState } from './maps.reducer';
 import * as MapsSelectors from './maps.selectors';
 
 describe('Maps Selectors', () => {
   const ERROR_MSG = 'No Error Available';
   const getMapsId = (it) => it['id'];
-  const createMapsEntity = (id: string, name = '') =>
+  const createIMapsEntity = (id: string, name = '') =>
     ({
       id,
       name: name || `name-${id}`,
-    } as MapsEntity);
+    } as IMapsEntity);
 
   let state;
 
@@ -17,9 +17,9 @@ describe('Maps Selectors', () => {
     state = {
       maps: mapsAdapter.setAll(
         [
-          createMapsEntity('MAP-AAA'),
-          createMapsEntity('MAP-BBB'),
-          createMapsEntity('MAP-CCC'),
+          createIMapsEntity('MAP-AAA'),
+          createIMapsEntity('MAP-BBB'),
+          createIMapsEntity('MAP-CCC'),
         ],
         {
           ...initialMapsState,

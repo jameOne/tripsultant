@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { MapsEntity } from './maps.models';
+import { IMapsEntity } from './maps.models';
 import { EntityMap, Predicate, Update } from '@ngrx/entity';
 
 export enum MapsActionsEnum {
@@ -22,18 +22,18 @@ export enum MapsActionsEnum {
 }
 
 export const loadMaps = createAction(MapsActionsEnum.LoadMaps);
-export const loadMapsSuccess = createAction(MapsActionsEnum.LoadMapsSuccess, props<{ maps: MapsEntity[] }>());
+export const loadMapsSuccess = createAction(MapsActionsEnum.LoadMapsSuccess, props<{ maps: IMapsEntity[] }>());
 export const selectMap = createAction(MapsActionsEnum.SelectMap, props<{ id: string }>());
 export const loadMapsFailure = createAction(MapsActionsEnum.LoadMapsFailure, props<{ error: any }>());
-export const addMap = createAction(MapsActionsEnum.AddMap, props<{ map: MapsEntity }>());
-export const setMap = createAction(MapsActionsEnum.SetMap, props<{ map: MapsEntity }>());
-export const upsertMap = createAction(MapsActionsEnum.UpsertMap, props<{ map: MapsEntity }>());
-export const addMaps = createAction(MapsActionsEnum.AddMaps, props<{ maps: MapsEntity[] }>());
-export const upsertMaps = createAction(MapsActionsEnum.UpsertMaps, props<{ maps: MapsEntity[] }>());
-export const updateMap = createAction(MapsActionsEnum.UpdateMap, props<{ update: Update<MapsEntity> }>());
-export const updateMaps = createAction(MapsActionsEnum.UpdateMaps, props<{ updates: Update<MapsEntity>[] }>());
-export const mapMaps = createAction(MapsActionsEnum.MapMaps, props<{ entityMap: EntityMap<MapsEntity> }>());
+export const addMap = createAction(MapsActionsEnum.AddMap, props<{ map: IMapsEntity }>());
+export const setMap = createAction(MapsActionsEnum.SetMap, props<{ map: IMapsEntity }>());
+export const upsertMap = createAction(MapsActionsEnum.UpsertMap, props<{ map: IMapsEntity }>());
+export const addMaps = createAction(MapsActionsEnum.AddMaps, props<{ maps: IMapsEntity[] }>());
+export const upsertMaps = createAction(MapsActionsEnum.UpsertMaps, props<{ maps: IMapsEntity[] }>());
+export const updateMap = createAction(MapsActionsEnum.UpdateMap, props<{ update: Update<IMapsEntity> }>());
+export const updateMaps = createAction(MapsActionsEnum.UpdateMaps, props<{ updates: Update<IMapsEntity>[] }>());
+export const mapMaps = createAction(MapsActionsEnum.MapMaps, props<{ entityMap: EntityMap<IMapsEntity> }>());
 export const deleteMap = createAction(MapsActionsEnum.DeleteMap, props<{ id: string }>());
 export const deleteMaps = createAction(MapsActionsEnum.DeleteMaps, props<{ ids: string[] }>());
-export const deleteMapsByPredicate = createAction(MapsActionsEnum.DeleteMapsByPredicate, props<{ predicate: Predicate<MapsEntity> }>());
+export const deleteMapsByPredicate = createAction(MapsActionsEnum.DeleteMapsByPredicate, props<{ predicate: Predicate<IMapsEntity> }>());
 export const clearMaps = createAction(MapsActionsEnum.ClearMaps);

@@ -1,7 +1,8 @@
 /**
  * Interface for the 'Maps' data
  */
-export interface MapsEntity {
+
+export interface IMapsEntity {
   id: string; // Primary ID
   name?: string; // Tab label
 }

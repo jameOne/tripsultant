@@ -2,11 +2,11 @@ import { createReducer, on, Action } from '@ngrx/store';
 import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 
 import * as MapsActions from './maps.actions';
-import { MapsEntity } from './maps.models';
+import { IMapsEntity } from './maps.models';
 
 export const MAPS_FEATURE_KEY = 'maps';
 
-export interface MapsState extends EntityState<MapsEntity> {
+export interface MapsState extends EntityState<IMapsEntity> {
   selectedId?: string; // which Maps record has been selected
   loaded: boolean; // has the Maps list been loaded
   error?: string | null; // last known error (if any)
@@ -16,8 +16,8 @@ export interface MapsPartialState {
   readonly [MAPS_FEATURE_KEY]: MapsState;
 }
 
-export const mapsAdapter: EntityAdapter<MapsEntity> = createEntityAdapter<
-  MapsEntity
+export const mapsAdapter: EntityAdapter<IMapsEntity> = createEntityAdapter<
+  IMapsEntity
 >();
 
 export const initialMapsState: MapsState = mapsAdapter.getInitialState({

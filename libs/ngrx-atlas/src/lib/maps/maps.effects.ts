@@ -3,7 +3,7 @@ import { createEffect, Actions, ofType } from '@ngrx/effects';
 import { fetch } from '@nrwl/angular';
 
 import * as MapsActions from './maps.actions';
-import { MapsEntity } from '@tripsultant/ngrx-atlas';
+import { IMapsEntity } from './maps.models';
 
 @Injectable()
 export class MapsEffects {
@@ -28,7 +28,7 @@ export class MapsEffects {
 
   constructor(private actions$: Actions) {}
 
-  loadMaps(): MapsEntity[] {
+  loadMaps(): IMapsEntity[] {
     return [];
   }
 }

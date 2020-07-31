@@ -1,4 +1,4 @@
-import { MapsEntity } from './maps.models';
+import { IMapsEntity } from './maps.models';
 import * as MapsActions from './maps.actions';
 import { MapsState, initialMapsState, MAPS_REDUCER } from './maps.reducer';
 import { Action } from '@ngrx/store';
@@ -9,16 +9,16 @@ describe('Maps Reducer', () => {
   let action: Action;
   let result: MapsState;
 
-  const createMapsEntity = (id: string, name = '') =>
+  const createIMapsEntity = (id: string, name = '') =>
     ({
       id,
       name: name || `name-${id}`,
-    } as MapsEntity);
+    } as IMapsEntity);
 
   beforeEach(async(() => {
     const maps = [
-      createMapsEntity('Test-0'),
-      createMapsEntity('Test-1'),
+      createIMapsEntity('Test-0'),
+      createIMapsEntity('Test-1'),
     ];
     // load initial entities
     action = MapsActions.loadMapsSuccess({ maps });

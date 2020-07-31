@@ -7,7 +7,7 @@ import { StoreModule, Store } from '@ngrx/store';
 
 import { NxModule } from '@nrwl/angular';
 
-import { MapsEntity } from './maps.models';
+import { IMapsEntity } from './maps.models';
 import { MapsEffects } from './maps.effects';
 import { MapsFacade } from './maps.facade';
 
@@ -21,11 +21,11 @@ interface TestSchema {
 describe('MapsFacade', () => {
   let facade: MapsFacade;
   let store: Store<TestSchema>;
-  const createMapsEntity = (id: string, name = '') =>
+  const createIMapsEntity = (id: string, name = '') =>
     ({
       id,
       name: name || `name-${id}`,
-    } as MapsEntity);
+    } as IMapsEntity);
 
   beforeEach(() => {});
 
@@ -93,7 +93,7 @@ describe('MapsFacade', () => {
 
         facade.dispatch(
           MapsActions.loadMapsSuccess({
-            maps: [createMapsEntity('AAA'), createMapsEntity('BBB')],
+            maps: [createIMapsEntity('AAA'), createIMapsEntity('BBB')],
           })
         );
 
